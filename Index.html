@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Voltic - Impulso Digital Contigo</title>
 
+    <link rel="stylesheet" href="assets/css/estilos.css" />
+
     <link type="image/png" sizes="32x32" rel="icon" href=".../icons8-gmail-nuevo-color-32.png" />
 
     <script src="https://cdn.tailwindcss.com"></script>
@@ -16,32 +18,7 @@
       href="https://fonts.googleapis.com/css2?family=Amaranth:wght@400;700&family=League+Spartan:wght@400;700;900&display=swap"
       rel="stylesheet"
     />
-
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              "voltic-teal": "#43CADB",
-              "voltic-purple-mid": "#8660E7",
-              "voltic-purple-dark": "#440885",
-              "voltic-purple-light": "#726ECD",
-              "voltic-blue": "#382CCE",
-            },
-            fontFamily: {
-              amaranth: ["Amaranth", "sans-serif"],
-              spartan: ["League Spartan", "sans-serif"],
-            },
-            fontSize: {
-              "2xs": ".65rem",
-              "3xs": ".55rem",
-            },
-          },
-        },
-      };
-    </script>
   </head>
 
   <body class="bg-white font-spartan">
@@ -51,7 +28,7 @@
           href="#"
           class="text-3xl font-bold font-amaranth bg-gradient-to-t from-voltic-teal to-voltic-purple-mid bg-clip-text text-transparent"
         >
-          <img src="assets/img/logo1.png" alt="Voltic Logo" class="h-[30px]" />
+          <img src="assets/img/logoP.webp" alt="Voltic Logo" class="h-[30px]" />
         </a>
 
         <div class="hidden sm:flex items-center space-x-2 md:space-x-6">
@@ -155,7 +132,7 @@
           class="absolute top-1/2 right-0 w-96 h-96 bg-voltic-teal rounded-full opacity-20 filter blur-3xl animate-blob animation-delay-4000"
         ></div>
 
-        <div class="container mx-auto px-6 pt-10 pb-48 md:pt-16 md:pb-56 relative z-10">
+        <div class="container mx-auto px-6 pt-10 pb-20 md:pt-16 md:pb-32 relative z-10">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             <div class="text-center md:text-left" data-aos="fade-right">
               <span
@@ -192,6 +169,53 @@
                   Nuestros Proyectos
                 </a>
               </div>
+
+              <div
+                class="flex items-center justify-center md:justify-start gap-10 mt-10"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
+                <a
+                  href="mailto:Voltic202513@gmail.com"
+                  class="bg-gray-100 p-3 rounded-full shadow-lg transform transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+                  aria-label="Enviar correo a Voltic"
+                >
+                  <img
+                    width="32"
+                    height="32"
+                    src="https://img.icons8.com/color/48/gmail-new.png"
+                    alt="gmail-new"
+                  />
+                </a>
+
+                <a
+                  href="https://instagram.com/Voltic202513"
+                  target="_blank"
+                  class="bg-gray-100 p-3 rounded-full shadow-lg transform transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+                  aria-label="Ir al Instagram de Voltic"
+                >
+                  <img
+                    width="32"
+                    height="32"
+                    src="https://img.icons8.com/fluency/48/instagram-new.png"
+                    alt="instagram-new"
+                  />
+                </a>
+
+                <a
+                  href="https://wa.me/584144489708"
+                  target="_blank"
+                  class="bg-gray-100 p-3 rounded-full shadow-lg transform transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+                  aria-label="Contactar a Voltic por WhatsApp"
+                >
+                  <img
+                    width="32"
+                    height="32"
+                    src="https://img.icons8.com/color/48/whatsapp--v1.png"
+                    alt="whatsapp--v1"
+                  />
+                </a>
+              </div>
             </div>
 
             <div
@@ -205,105 +229,1092 @@
                 alt="Fondo decorativo"
               />
               <img
-                src="assets/img/hero.PNG"
+                src="assets/img/modelo1.webp"
                 class="relative z-20 w-12/12 md:w-11/12 h-auto scale-125 top-[100px]"
                 alt="Modelo Voltic"
               />
             </div>
           </div>
         </div>
+      </section>
 
-        <div
-          class="hidden lg:block absolute bottom-0 left-0 w-full z-20"
-          data-aos="fade-up"
-          data-aos-delay="300"
-        >
-          <div class="bg-white/50 backdrop-blur-xl shadow-xl border-t border-white/30">
-            <div class="container mx-auto px-6 py-5">
-              <div class="flex flex-col lg:flex-row items-center justify-center lg:justify-between gap-6">
-                <a
-                  href="mailto:Voltic202513@gmail.com"
-                  class="flex items-center gap-2 text-gray-800 hover:text-voltic-blue transition-colors"
+      <section id="servicios" class="bg-gray-50 py-20">
+        <div class="container mx-auto px-6">
+          <div class="text-center mb-12">
+            <span class="font-bold uppercase text-3xl text-voltic-purple-mid">Nuestros Servicios</span>
+          </div>
+
+          <div x-data="{ tab: 1 }">
+            <div class="lg:hidden flex flex-col gap-3">
+              <div class="bg-white rounded-lg shadow">
+                <button
+                  @click="tab = (tab === 1 ? null : 1)"
+                  class="p-4 w-full text-left flex justify-between items-center"
+                >
+                  <h4 class="font-spartan font-bold text-base text-voltic-purple-dark">Desarrollo Web</h4>
+                  <svg
+                    :class="{ 'rotate-180': tab === 1 }"
+                    class="w-5 h-5 text-voltic-purple-mid transition-transform"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </button>
+                <div
+                  x-show="tab === 1"
+                  x-transition:enter="transition-opacity ease-out duration-150"
+                  x-transition:enter-start="opacity-0"
+                  x-transition:enter-end="opacity-100"
+                  x-transition:leave="transition-opacity ease-in duration-150"
+                  x-transition:leave-start="opacity-100"
+                  x-transition:leave-end="opacity-0"
+                  x-cloak
+                  class="p-4 border-t border-gray-100"
                 >
                   <img
-                    width="28"
-                    height="28"
-                    src="https://img.icons8.com/color/48/gmail-new.png"
-                    alt="gmail-new"
+                    src="assets/img/desarrollo_web.webp"
+                    alt="Desarrollo Web"
+                    class="rounded-lg shadow-xl mb-6 w-full max-h-[350px] object-cover"
                   />
-                  <span class="font-spartan text-lg font-bold font-medium">Voltic202513@gmail.com</span>
-                </a>
+                  <h3 class="font-spartan font-black text-2xl text-voltic-purple-dark mb-3">
+                    Desarrollo Web a la Medida
+                  </h3>
+                  <p class="text-gray-700 text-base mb-5">
+                    Creamos sitios web optimizados, rápidos y 100% responsivos. Desde Landing Pages hasta
+                    complejas tiendas de E-commerce, transformamos tu visión en una realidad digital que atrae
+                    y convierte visitantes.
+                  </p>
+                  <ul class="space-y-2">
+                    <li class="flex items-center gap-3">
+                      <svg class="w-5 h-5 text-voltic-teal" fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                          fill-rule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                      <span class="text-gray-700">Diseño de Tiendas Online (E-commerce)</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                      <svg class="w-5 h-5 text-voltic-teal" fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                          fill-rule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                      <span class="text-gray-700">Sitios Corporativos y Landing Pages</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
 
-                <a
-                  href="https://instagram.com/Voltic202513"
-                  target="_blank"
-                  class="flex items-center gap-2 text-gray-800 hover:text-voltic-blue transition-colors"
+              <div class="bg-white rounded-lg shadow">
+                <button
+                  @click="tab = (tab === 2 ? null : 2)"
+                  class="p-4 w-full text-left flex justify-between items-center"
+                >
+                  <h4 class="font-spartan font-bold text-base text-voltic-purple-dark">Consultoría</h4>
+                  <svg
+                    :class="{ 'rotate-180': tab === 2 }"
+                    class="w-5 h-5 text-voltic-purple-mid transition-transform"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </button>
+                <div
+                  x-show="tab === 2"
+                  x-transition:enter="transition-opacity ease-out duration-150"
+                  x-transition:enter-start="opacity-0"
+                  x-transition:enter-end="opacity-100"
+                  x-transition:leave="transition-opacity ease-in duration-150"
+                  x-transition:leave-start="opacity-100"
+                  x-transition:leave-end="opacity-0"
+                  x-cloak
+                  class="p-4 border-t border-gray-100"
                 >
                   <img
-                    width="28"
-                    height="28"
-                    src="https://img.icons8.com/fluency/48/instagram-new.png"
-                    alt="instagram-new"
+                    src="assets/img/consultoria.webp"
+                    alt="Consultoría"
+                    class="rounded-lg shadow-xl mb-6 w-full max-h-[350px] object-cover"
                   />
-                  <span class="font-spartan font-bold text-lg font-medium">Voltic202513</span>
-                </a>
+                  <h3 class="font-spartan font-black text-2xl text-voltic-purple-dark mb-3">
+                    Consultoría Estratégica Digital
+                  </h3>
+                  <p class="text-gray-700 text-base mb-5">
+                    ¿No sabes por dónde empezar? Analizamos tu negocio, tu competencia y tu audiencia para
+                    crear un plan de acción digital claro y efectivo que te permita alcanzar tus objetivos.
+                  </p>
+                  <ul class="space-y-2">
+                    <li class="flex items-center gap-3">
+                      <svg class="w-5 h-5 text-voltic-teal" fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                          fill-rule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                      <span class="text-gray-700">Análisis de Mercado y Competencia</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                      <svg class="w-5 h-5 text-voltic-teal" fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                          fill-rule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                      <span class="text-gray-700">Definición de Estrategia de Marca</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
 
-                <a
-                  href="https://wa.me/584144489708"
-                  target="_blank"
-                  class="flex items-center gap-2 text-gray-800 hover:text-voltic-blue transition-colors"
+              <div class="bg-white rounded-lg shadow">
+                <button
+                  @click="tab = (tab === 3 ? null : 3)"
+                  class="p-4 w-full text-left flex justify-between items-center"
+                >
+                  <h4 class="font-spartan font-bold text-base text-voltic-purple-dark">SEO</h4>
+                  <svg
+                    :class="{ 'rotate-180': tab === 3 }"
+                    class="w-5 h-5 text-voltic-purple-mid transition-transform"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </button>
+                <div
+                  x-show="tab === 3"
+                  x-transition:enter="transition-opacity ease-out duration-150"
+                  x-transition:enter-start="opacity-0"
+                  x-transition:enter-end="opacity-100"
+                  x-transition:leave="transition-opacity ease-in duration-150"
+                  x-transition:leave-start="opacity-100"
+                  x-transition:leave-end="opacity-0"
+                  x-cloak
+                  class="p-4 border-t border-gray-100"
                 >
                   <img
-                    width="28"
-                    height="28"
-                    src="https://img.icons8.com/color/48/whatsapp--v1.png"
-                    alt="whatsapp--v1"
+                    src="assets/img/seo.webp"
+                    alt="SEO"
+                    class="rounded-lg shadow-xl mb-6 w-full max-h-[350px] object-cover"
                   />
-                  <span class="font-spartan text-lg font-bold font-medium">04144489708</span>
-                </a>
+                  <h3 class="font-spartan font-black text-2xl text-voltic-purple-dark mb-3">
+                    Posicionamiento SEO
+                  </h3>
+                  <p class="text-gray-700 text-base mb-5">
+                    Hacemos que tu negocio aparezca en las primeras posiciones de Google. Más visibilidad
+                    significa más clientes. Optimizamos tu sitio para que tu público objetivo te encuentre.
+                  </p>
+                  <ul class="space-y-2">
+                    <li class="flex items-center gap-3">
+                      <svg class="w-5 h-5 text-voltic-teal" fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                          fill-rule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                      <span class="text-gray-700">Auditoría SEO On-Page y Off-Page</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                      <svg class="w-5 h-5 text-voltic-teal" fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                          fill-rule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                      <span class="text-gray-700">Estrategia de Link Building</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="bg-white rounded-lg shadow">
+                <button
+                  @click="tab = (tab === 4 ? null : 4)"
+                  class="p-4 w-full text-left flex justify-between items-center"
+                >
+                  <h4 class="font-spartan font-bold text-base text-voltic-purple-dark">
+                    Mantenimiento de sitios Webs
+                  </h4>
+                  <svg
+                    :class="{ 'rotate-180': tab === 4 }"
+                    class="w-5 h-5 text-voltic-purple-mid transition-transform"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </button>
+                <div
+                  x-show="tab === 4"
+                  x-transition:enter="transition-opacity ease-out duration-150"
+                  x-transition:enter-start="opacity-0"
+                  x-transition:enter-end="opacity-100"
+                  x-transition:leave="transition-opacity ease-in duration-150"
+                  x-transition:leave-start="opacity-100"
+                  x-transition:leave-end="opacity-0"
+                  x-cloak
+                  class="p-4 border-t border-gray-100"
+                >
+                  <img
+                    src="assets/img/soporte.webp"
+                    alt="Mantenimiento"
+                    class="rounded-lg shadow-xl mb-6 w-full max-h-[350px] object-cover"
+                  />
+                  <h3 class="font-spartan font-black text-2xl text-voltic-purple-dark mb-3">
+                    Mantenimiento de Sitios Webs
+                  </h3>
+                  <p class="text-gray-700 text-base mb-5">
+                    Nos encargamos de la salud de tu sitio web para que tú te dediques a tu negocio.
+                    Mantenemos todo actualizado, seguro y funcionando sin problemas, con copias de seguridad y
+                    soporte constante.
+                  </p>
+                  <ul class="space-y-2">
+                    <li class="flex items-center gap-3">
+                      <svg class="w-5 h-5 text-voltic-teal" fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                          fill-rule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                      <span class="text-gray-700">Actualizaciones de Seguridad</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                      <svg class="w-5 h-5 text-voltic-teal" fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                          fill-rule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                      <span class="text-gray-700">Copias de Respaldo Diarias</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="bg-white rounded-lg shadow">
+                <button
+                  @click="tab = (tab === 5 ? null : 5)"
+                  class="p-4 w-full text-left flex justify-between items-center"
+                >
+                  <h4 class="font-spartan font-bold text-base text-voltic-purple-dark">Manejo de RRSS</h4>
+                  <svg
+                    :class="{ 'rotate-180': tab === 5 }"
+                    class="w-5 h-5 text-voltic-purple-mid transition-transform"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </button>
+                <div
+                  x-show="tab === 5"
+                  x-transition:enter="transition-opacity ease-out duration-150"
+                  x-transition:enter-start="opacity-0"
+                  x-transition:enter-end="opacity-100"
+                  x-transition:leave="transition-opacity ease-in duration-150"
+                  x-transition:leave-start="opacity-100"
+                  x-transition:leave-end="opacity-0"
+                  x-cloak
+                  class="p-4 border-t border-gray-100"
+                >
+                  <img
+                    src="assets/img/RRSS.webp"
+                    alt="RRSS"
+                    class="rounded-lg shadow-xl mb-6 w-full max-h-[350px] object-cover"
+                  />
+                  <h3 class="font-spartan font-black text-2xl text-voltic-purple-dark mb-3">
+                    Manejo de Redes Sociales (RRSS)
+                  </h3>
+                  <p class="text-gray-700 text-base mb-5">
+                    Creamos y gestionamos contenido de valor para tus redes sociales. Construimos una
+                    comunidad sólida alrededor de tu marca, aumentamos tu alcance y conectamos con tus
+                    clientes.
+                  </p>
+                  <ul class="space-y-2">
+                    <li class="flex items-center gap-3">
+                      <svg class="w-5 h-5 text-voltic-teal" fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                          fill-rule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                      <span class="text-gray-700">Creación de Contenido y Parrillas</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                      <svg class="w-5 h-5 text-voltic-teal" fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                          fill-rule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                      <span class="text-gray-700">Gestión de Campañas (Facebook/Instagram Ads)</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="hidden lg:flex flex-row gap-12 lg:gap-16 items-start">
+              <div class="w-full lg:w-2/3">
+                <div
+                  x-show="tab === 1"
+                  x-transition:enter="transition-opacity ease-out duration-150"
+                  x-transition:enter-start="opacity-0"
+                  x-transition:enter-end="opacity-100"
+                  x-transition:leave="transition-opacity ease-in duration-150"
+                  x-transition:leave-start="opacity-100"
+                  x-transition:leave-end="opacity-0"
+                >
+                  <img
+                    src="assets/img/desarrollo_web.webp"
+                    alt="Desarrollo Web"
+                    class="rounded-lg shadow-xl mb-6 w-full max-h-[350px] object-cover"
+                  />
+                  <h3 class="font-spartan font-black text-2xl text-voltic-purple-dark mb-3">
+                    Desarrollo Web a la Medida
+                  </h3>
+                  <p class="text-gray-700 text-base mb-5">
+                    Creamos sitios web optimizados, rápidos y 100% responsivos. Desde Landing Pages hasta
+                    complejas tiendas de E-commerce, transformamos tu visión en una realidad digital que atrae
+                    y convierte visitantes.
+                  </p>
+                  <ul class="space-y-2">
+                    <li class="flex items-center gap-3">
+                      <svg class="w-5 h-5 text-voltic-teal" fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                          fill-rule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                      <span class="text-gray-700">Diseño de Tiendas Online (E-commerce)</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                      <svg class="w-5 h-5 text-voltic-teal" fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                          fill-rule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                      <span class="text-gray-700">Sitios Corporativos y Landing Pages</span>
+                    </li>
+                  </ul>
+                </div>
+                <div
+                  x-show="tab === 2"
+                  x-transition:enter="transition-opacity ease-out duration-150"
+                  x-transition:enter-start="opacity-0"
+                  x-transition:enter-end="opacity-100"
+                  x-transition:leave="transition-opacity ease-in duration-150"
+                  x-transition:leave-start="opacity-100"
+                  x-transition:leave-end="opacity-0"
+                  x-cloak
+                >
+                  <img
+                    src="assets/img/consultoria.webp"
+                    alt="Consultoría"
+                    class="rounded-lg shadow-xl mb-6 w-full max-h-[350px] object-cover"
+                  />
+                  <h3 class="font-spartan font-black text-2xl text-voltic-purple-dark mb-3">
+                    Consultoría Estratégica Digital
+                  </h3>
+                  <p class="text-gray-700 text-base mb-5">
+                    ¿No sabes por dónde empezar? Analizamos tu negocio, tu competencia y tu audiencia para
+                    crear un plan de acción digital claro y efectivo que te permita alcanzar tus objetivos.
+                  </p>
+                  <ul class="space-y-2">
+                    <li class="flex items-center gap-3">
+                      <svg class="w-5 h-5 text-voltic-teal" fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                          fill-rule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                      <span class="text-gray-700">Análisis de Mercado y Competencia</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                      <svg class="w-5 h-5 text-voltic-teal" fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                          fill-rule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                      <span class="text-gray-700">Definición de Estrategia de Marca</span>
+                    </li>
+                  </ul>
+                </div>
+                <div
+                  x-show="tab === 3"
+                  x-transition:enter="transition-opacity ease-out duration-150"
+                  x-transition:enter-start="opacity-0"
+                  x-transition:enter-end="opacity-100"
+                  x-transition:leave="transition-opacity ease-in duration-150"
+                  x-transition:leave-start="opacity-100"
+                  x-transition:leave-end="opacity-0"
+                  x-cloak
+                >
+                  <img
+                    src="assets/img/seo.webp"
+                    alt="SEO"
+                    class="rounded-lg shadow-xl mb-6 w-full max-h-[350px] object-cover"
+                  />
+                  <h3 class="font-spartan font-black text-2xl text-voltic-purple-dark mb-3">
+                    Posicionamiento SEO
+                  </h3>
+                  <p class="text-gray-700 text-base mb-5">
+                    Hacemos que tu negocio aparezca en las primeras posiciones de Google. Más visibilidad
+                    significa más clientes. Optimizamos tu sitio para que tu público objetivo te encuentre.
+                  </p>
+                  <ul class="space-y-2">
+                    <li class="flex items-center gap-3">
+                      <svg class="w-5 h-5 text-voltic-teal" fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                          fill-rule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                      <span class="text-gray-700">Auditoría SEO On-Page y Off-Page</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                      <svg class="w-5 h-5 text-voltic-teal" fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                          fill-rule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                      <span class="text-gray-700">Estrategia de Link Building</span>
+                    </li>
+                  </ul>
+                </div>
+                <div
+                  x-show="tab === 4"
+                  x-transition:enter="transition-opacity ease-out duration-150"
+                  x-transition:enter-start="opacity-0"
+                  x-transition:enter-end="opacity-100"
+                  x-transition:leave="transition-opacity ease-in duration-150"
+                  x-transition:leave-start="opacity-100"
+                  x-transition:leave-end="opacity-0"
+                  x-cloak
+                >
+                  <img
+                    src="assets/img/soporte.webp"
+                    alt="Mantenimiento"
+                    class="rounded-lg shadow-xl mb-6 w-full max-h-[350px] object-cover"
+                  />
+                  <h3 class="font-spartan font-black text-2xl text-voltic-purple-dark mb-3">
+                    Mantenimiento de Sitios Webs
+                  </h3>
+                  <p class="text-gray-700 text-base mb-5">
+                    Nos encargamos de la salud de tu sitio web para que tú te dediques a tu negocio.
+                    Mantenemos todo actualizado, seguro y funcionando sin problemas, con copias de seguridad y
+                    soporte constante.
+                  </p>
+                  <ul class="space-y-2">
+                    <li class="flex items-center gap-3">
+                      <svg class="w-5 h-5 text-voltic-teal" fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                          fill-rule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                      <span class="text-gray-700">Actualizaciones de Seguridad</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                      <svg class="w-5 h-5 text-voltic-teal" fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                          fill-rule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                      <span class="text-gray-700">Copias de Respaldo Diarias</span>
+                    </li>
+                  </ul>
+                </div>
+                <div
+                  x-show="tab === 5"
+                  x-transition:enter="transition-opacity ease-out duration-150"
+                  x-transition:enter-start="opacity-0"
+                  x-transition:enter-end="opacity-100"
+                  x-transition:leave="transition-opacity ease-in duration-150"
+                  x-transition:leave-start="opacity-100"
+                  x-transition:leave-end="opacity-0"
+                  x-cloak
+                >
+                  <img
+                    src="assets/img/RRSS.webp"
+                    alt="RRSS"
+                    class="rounded-lg shadow-xl mb-6 w-full max-h-[350px] object-cover"
+                  />
+                  <h3 class="font-spartan font-black text-2xl text-voltic-purple-dark mb-3">
+                    Manejo de Redes Sociales (RRSS)
+                  </h3>
+                  <p class="text-gray-700 text-base mb-5">
+                    Creamos y gestionamos contenido de valor para tus redes sociales. Construimos una
+                    comunidad sólida alrededor de tu marca, aumentamos tu alcance y conectamos con tus
+                    clientes.
+                  </p>
+                  <ul class="space-y-2">
+                    <li class="flex items-center gap-3">
+                      <svg class="w-5 h-5 text-voltic-teal" fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                          fill-rule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                      <span class="text-gray-700">Creación de Contenido y Parrillas</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                      <svg class="w-5 h-5 text-voltic-teal" fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                          fill-rule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                      <span class="text-gray-700">Gestión de Campañas (Facebook/Instagram Ads)</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="w-full lg:w-1/3 flex flex-col gap-3">
+                <button
+                  @click="tab = 1"
+                  :class="{
+              'bg-voltic-purple-mid text-white shadow-xl scale-105': tab === 1,
+              'bg-white text-gray-700 hover:bg-gray-100': tab !== 1
+            }"
+                  class="p-4 rounded-lg transition-all duration-300 w-full text-left"
+                >
+                  <h4 class="font-spartan font-bold text-base mb-1">Desarrollo Web</h4>
+                  <p class="text-sm opacity-90">Sitios web y tiendas online a medida.</p>
+                </button>
+                <button
+                  @click="tab = 2"
+                  :class="{
+              'bg-voltic-purple-mid text-white shadow-xl scale-105': tab === 2,
+              'bg-white text-gray-700 hover:bg-gray-100': tab !== 2
+            }"
+                  class="p-4 rounded-lg transition-all duration-300 w-full text-left"
+                >
+                  <h4 class="font-spartan font-bold text-base mb-1">Consultoría</h4>
+                  <p class="text-sm opacity-90">Planes de acción y estrategia digital.</p>
+                </button>
+                <button
+                  @click="tab = 3"
+                  :class="{
+              'bg-voltic-purple-mid text-white shadow-xl scale-105': tab === 3,
+              'bg-white text-gray-700 hover:bg-gray-100': tab !== 3
+            }"
+                  class="p-4 rounded-lg transition-all duration-300 w-full text-left"
+                >
+                  <h4 class="font-spartan font-bold text-base mb-1">SEO</h4>
+                  <p class="text-sm opacity-90">Posicionamiento en buscadores.</p>
+                </button>
+                <button
+                  @click="tab = 4"
+                  :class="{
+              'bg-voltic-purple-mid text-white shadow-xl scale-105': tab === 4,
+              'bg-white text-gray-700 hover:bg-gray-100': tab !== 4
+            }"
+                  class="p-4 rounded-lg transition-all duration-300 w-full text-left"
+                >
+                  <h4 class="font-spartan font-bold text-base mb-1">Mantenimiento de sitios Webs</h4>
+                  <p class="text-sm opacity-90">Actualizaciones, seguridad y soporte.</p>
+                </button>
+                <button
+                  @click="tab = 5"
+                  :class="{
+              'bg-voltic-purple-mid text-white shadow-xl scale-105': tab === 5,
+              'bg-white text-gray-700 hover:bg-gray-100': tab !== 5
+            }"
+                  class="p-4 rounded-lg transition-all duration-300 w-full text-left"
+                >
+                  <h4 class="font-spartan font-bold text-base mb-1">Manejo de RRSS</h4>
+                  <p class="text-sm opacity-90">Gestión de comunidad y contenido.</p>
+                </button>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="servicios" class="bg-gray-50 py-24">
+      <section id="nosotros" class="bg-white py-24 overflow-hidden">
         <div class="container mx-auto px-6">
-          <h2 class="text-3xl font-bold text-center text-black">Nuestros Servicios</h2>
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <div data-aos="fade-right">
+              <h2
+                class="font-spartan font-black text-4xl md:text-5xl text-voltic-purple-dark mb-6 leading-tight"
+              >
+                Conoce más
+                <span
+                  class="bg-gradient-to-r from-voltic-purple-mid to-voltic-teal bg-clip-text text-transparent"
+                  >sobre nosotros</span
+                >
+              </h2>
+
+              <p class="text-lg text-gray-700 mb-8">
+                Voltic es una agencia fundada en el año 2025 cuyo principal objetivo es el de ofrecer a los
+                negocios la posibilidad de obtener a la medida el sitio Web de sus sueños.
+              </p>
+            </div>
+
+            <div data-aos="fade-left" data-aos-delay="200">
+              <img
+                src="assets/img/modelo2.webp"
+                alt="Equipo de Voltic"
+                class="rounded-xl shadow-2xl w-full h-auto"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="cintillo"
+        class="w-full py-6 overflow-hidden bg-gradient-to-r from-voltic-purple-dark to-voltic-purple-mid"
+      >
+        <div class="flex whitespace-nowrap animate-scroll-x">
+          <div class="flex items-center mx-10">
+            <span class="text-3xl font-amaranth font-bold text-white">Voltic</span>
+            <span class="ml-4 text-2xl font-spartan font-medium text-gray-200 uppercase"
+              >Impulso Digital Contigo</span
+            >
+          </div>
+
+          <div class="flex items-center mx-10">
+            <span class="text-3xl font-amaranth font-bold text-white">Voltic</span>
+            <span class="ml-4 text-2xl font-spartan font-medium text-gray-200 uppercase"
+              >Impulso Digital Contigo</span
+            >
+          </div>
+
+          <div class="flex items-center mx-10">
+            <span class="text-3xl font-amaranth font-bold text-white">Voltic</span>
+            <span class="ml-4 text-2xl font-spartan font-medium text-gray-200 uppercase"
+              >Impulso Digital Contigo</span
+            >
+          </div>
+
+          <div class="flex items-center mx-10">
+            <span class="text-3xl font-amaranth font-bold text-white">Voltic</span>
+            <span class="ml-4 text-2xl font-spartan font-medium text-gray-200 uppercase"
+              >Impulso Digital Contigo</span
+            >
+          </div>
+
+          <div class="flex items-center mx-10">
+            <span class="text-3xl font-amaranth font-bold text-white">Voltic</span>
+            <span class="ml-4 text-2xl font-spartan font-medium text-gray-200 uppercase"
+              >Impulso Digital Contigo</span
+            >
+          </div>
+
+          <div class="flex items-center mx-10">
+            <span class="text-3xl font-amaranth font-bold text-white">Voltic</span>
+            <span class="ml-4 text-2xl font-spartan font-medium text-gray-200 uppercase"
+              >Impulso Digital Contigo</span
+            >
+          </div>
+        </div>
+      </section>
+
+      <section id="contacto" class="bg-white py-24 overflow-hidden">
+        <div class="container mx-auto px-6">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+            <div data-aos="fade-right">
+              <h2
+                class="font-spartan font-black text-4xl md:text-5xl text-voltic-purple-dark mb-6 leading-tight"
+              >
+                ¿Listo para
+                <span
+                  class="bg-gradient-to-r from-voltic-purple-mid to-voltic-teal bg-clip-text text-transparent"
+                  >comenzar?</span
+                >
+              </h2>
+              <p class="text-lg text-gray-700 mb-8">
+                Completa el formulario y nos pondremos en contacto contigo lo antes posible para discutir cómo
+                podemos llevar tu negocio al siguiente nivel.
+              </p>
+              <p class="text-lg text-gray-700">
+                Si prefieres, también puedes contactarnos directamente a través de nuestras redes sociales o
+                correo electrónico.
+              </p>
+
+              <div class="flex items-center gap-6 mt-8">
+                <a
+                  href="mailto:Voltic202513@gmail.com"
+                  class="transform transition-transform hover:scale-110"
+                  aria-label="Enviar correo a Voltic"
+                >
+                  <img
+                    width="32"
+                    height="32"
+                    src="https://img.icons8.com/color/48/gmail-new.png"
+                    alt="gmail-new"
+                  />
+                </a>
+                <a
+                  href="https://instagram.com/Voltic202513"
+                  target="_blank"
+                  class="transform transition-transform hover:scale-110"
+                  aria-label="Ir al Instagram de Voltic"
+                >
+                  <img
+                    width="32"
+                    height="32"
+                    src="https://img.icons8.com/fluency/48/instagram-new.png"
+                    alt="instagram-new"
+                  />
+                </a>
+                <a
+                  href="https://wa.me/584144489708"
+                  target="_blank"
+                  class="transform transition-transform hover:scale-110"
+                  aria-label="Contactar a Voltic por WhatsApp"
+                >
+                  <img
+                    width="32"
+                    height="32"
+                    src="https://img.icons8.com/color/48/whatsapp--v1.png"
+                    alt="whatsapp--v1"
+                  />
+                </a>
+              </div>
+            </div>
+
+            <div class="bg-gray-50 p-8 rounded-xl shadow-lg" data-aos="fade-left" data-aos-delay="200">
+              <form action="#" method="POST" class="space-y-6">
+                <div>
+                  <label for="name" class="block text-sm font-medium text-gray-700">Tu Nombre</label>
+                  <div class="mt-1">
+                    <input
+                      type="text"
+                      name="name"
+                      id="name"
+                      required
+                      class="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-voltic-purple-mid"
+                      placeholder="Juan Pérez"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label for="email" class="block text-sm font-medium text-gray-700">Tu Email</label>
+                  <div class="mt-1">
+                    <input
+                      type="email"
+                      name="email"
+                      id="email"
+                      required
+                      class="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-voltic-purple-mid"
+                      placeholder="juan.perez@ejemplo.com"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label for="message" class="block text-sm font-medium text-gray-700">Mensaje</label>
+                  <div class="mt-1">
+                    <textarea
+                      id="message"
+                      name="message"
+                      rows="5"
+                      required
+                      class="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-voltic-purple-mid"
+                      placeholder="Hola Voltic, me gustaría cotizar un proyecto..."
+                    ></textarea>
+                  </div>
+                </div>
+
+                <div>
+                  <button
+                    type="submit"
+                    class="w-full py-3 px-8 font-bold font-spartan uppercase text-base rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-lg bg-gradient-to-r from-voltic-purple-mid to-voltic-teal text-white"
+                  >
+                    Enviar Mensaje
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq" class="bg-voltic-purple-dark py-24 text-white overflow-hidden">
+        <div class="container mx-auto px-6">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <div class="order-2 lg:order-1" data-aos="fade-right">
+              <img
+                src="assets/img/modelo3.webp"
+                alt="Voltic - Preguntas Frecuentes"
+                class="rounded-xl w-full h-auto"
+              />
+            </div>
+
+            <div class="order-1 lg:order-2" data-aos="fade-left">
+              <h2 class="font-spartan font-black text-4xl md:text-5xl mb-10 leading-tight">
+                PREGUNTAS FRECUENTES
+              </h2>
+
+              <div x-data="{ open: 1 }" class="space-y-4">
+                <div>
+                  <button
+                    @click="open = (open === 1 ? null : 1)"
+                    class="w-full flex justify-between items-center text-left p-5 rounded-full font-spartan font-bold text-lg transition-all duration-300"
+                    :class="{
+                'bg-gradient-to-r from-voltic-purple-mid to-voltic-teal text-white': open === 1,
+                'bg-gray-800 text-gray-200 hover:bg-gray-700': open !== 1
+              }"
+                  >
+                    <span>¿Cuánto tiempo tarda en hacerse un sitio web?</span>
+                    <svg
+                      :class="{ 'rotate-180': open === 1 }"
+                      class="w-5 h-5 transition-transform flex-shrink-0"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M19 9l-7 7-7-7"
+                      ></path>
+                    </svg>
+                  </button>
+                  <div x-show="open === 1" x-transition x-cloak class="px-5 py-4 text-gray-300 text-base">
+                    <p>
+                      El tiempo de entrega depende de la complejidad del proyecto. Una landing page puede
+                      tomar 1-2 semanas, mientras que un sitio de e-commerce completo puede tardar de 6 a 8
+                      semanas. Siempre te daremos un cronograma claro antes de empezar.
+                    </p>
+                  </div>
+                </div>
+
+                <div>
+                  <button
+                    @click="open = (open === 2 ? null : 2)"
+                    class="w-full flex justify-between items-center text-left p-5 rounded-full font-spartan font-bold text-lg transition-all duration-300"
+                    :class="{
+                'bg-gradient-to-r from-voltic-purple-mid to-voltic-teal text-white': open === 2,
+                'bg-gray-800 text-gray-200 hover:bg-gray-700': open !== 2
+              }"
+                  >
+                    <span>¿Ofrecen mantenimiento después del lanzamiento?</span>
+                    <svg
+                      :class="{ 'rotate-180': open === 2 }"
+                      class="w-5 h-5 transition-transform flex-shrink-0"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M19 9l-7 7-7-7"
+                      ></path>
+                    </svg>
+                  </button>
+                  <div x-show="open === 2" x-transition x-cloak class="px-5 py-4 text-gray-300 text-base">
+                    <p>
+                      ¡Sí! Ofrecemos planes de mantenimiento mensual que incluyen actualizaciones de
+                      seguridad, copias de respaldo, y soporte técnico para que tu sitio siempre esté seguro y
+                      funcionando al 100%.
+                    </p>
+                  </div>
+                </div>
+
+                <div>
+                  <button
+                    @click="open = (open === 3 ? null : 3)"
+                    class="w-full flex justify-between items-center text-left p-5 rounded-full font-spartan font-bold text-lg transition-all duration-300"
+                    :class="{
+                'bg-gradient-to-r from-voltic-purple-mid to-voltic-teal text-white': open === 3,
+                'bg-gray-800 text-gray-200 hover:bg-gray-700': open !== 3
+              }"
+                  >
+                    <span>¿Qué necesito para empezar el proyecto?</span>
+                    <svg
+                      :class="{ 'rotate-180': open === 3 }"
+                      class="w-5 h-5 transition-transform flex-shrink-0"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M19 9l-7 7-7-7"
+                      ></path>
+                    </svg>
+                  </button>
+                  <div x-show="open === 3" x-transition x-cloak class="px-5 py-4 text-gray-300 text-base">
+                    <p>
+                      Para empezar, necesitamos conocer tu idea de negocio, tus objetivos, y si ya tienes un
+                      logo o identidad de marca. Si no tienes nada, ¡no te preocupes! Nuestra consultoría
+                      puede guiarte desde cero.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init({
-        duration: 800,
-        once: true,
-        offset: 50,
-      });
-    </script>
+    <footer class="bg-black text-gray-300 py-16">
+      <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
+          <div data-aos="fade-up" data-aos-delay="100">
+            <a href="#" class="flex items-center justify-center md:justify-start gap-3">
+              <img src="assets/img/logoS.webp" alt="Voltic Logo Rayo" class="h-10 w-10" />
+              <span class="font-amaranth font-bold text-3xl text-white">Voltic</span>
+            </a>
+            <p class="font-spartan text-sm mt-4 text-gray-400">
+              Impulso Digital Contigo. <br />
+              Transformamos ideas en soluciones digitales exitosas.
+            </p>
+          </div>
 
-    <style>
-      .animate-blob {
-        animation: blob 100s infinite;
-      }
-      .animation-delay-4000 {
-        animation-delay: -4s;
-      }
-      @keyframes blob {
-        0% {
-          transform: translate(0px, 0px) scale(1);
-        }
-        33% {
-          transform: translate(10px, -15px) scale(1.05);
-        }
-        66% {
-          transform: translate(-10px, 10px) scale(0.95);
-        }
-        100% {
-          transform: translate(0px, 0px) scale(1);
-        }
-      }
-    </style>
+          <div data-aos="fade-up" data-aos-delay="200">
+            <h4 class="font-spartan font-bold text-lg text-white mb-4 uppercase">Navegación</h4>
+            <ul class="space-y-3">
+              <li>
+                <a href="#inicio" class="font-spartan text-gray-300 hover:text-voltic-teal transition-colors"
+                  >Inicio</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#servicios"
+                  class="font-spartan text-gray-300 hover:text-voltic-teal transition-colors"
+                  >Servicios</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#nosotros"
+                  class="font-spartan text-gray-300 hover:text-voltic-teal transition-colors"
+                  >Sobre Nosotros</a
+                >
+              </li>
+              <li>
+                <a href="#faq" class="font-spartan text-gray-300 hover:text-voltic-teal transition-colors"
+                  >Preguntas Frecuentes</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#contacto"
+                  class="font-spartan text-gray-300 hover:text-voltic-teal transition-colors"
+                  >Contacto</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div data-aos="fade-up" data-aos-delay="300">
+            <h4 class="font-spartan font-bold text-lg text-white mb-4 uppercase">Contáctanos</h4>
+            <div class="flex items-center justify-center md:justify-start gap-6">
+              <a
+                href="mailto:Voltic202513@gmail.com"
+                class="transform transition-transform hover:scale-110"
+                aria-label="Enviar correo a Voltic"
+              >
+                <img
+                  width="32"
+                  height="32"
+                  src="https://img.icons8.com/color/48/gmail-new.png"
+                  alt="gmail-new"
+                />
+              </a>
+              <a
+                href="https://instagram.com/Voltic202513"
+                target="_blank"
+                class="transform transition-transform hover:scale-110"
+                aria-label="Ir al Instagram de Voltic"
+              >
+                <img
+                  width="32"
+                  height="32"
+                  src="https://img.icons8.com/fluency/48/instagram-new.png"
+                  alt="instagram-new"
+                />
+              </a>
+              <a
+                href="https://wa.me/584144489708"
+                target="_blank"
+                class="transform transition-transform hover:scale-110"
+                aria-label="Contactar a Voltic por WhatsApp"
+              >
+                <img
+                  width="32"
+                  height="32"
+                  src="https://img.icons8.com/color/48/whatsapp--v1.png"
+                  alt="whatsapp--v1"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-16 border-t border-gray-800 pt-8 text-center">
+          <p class="font-spartan text-sm text-gray-500">© 2025 Voltic. Todos los derechos reservados.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/script.js"></script>
   </body>
 </html>
