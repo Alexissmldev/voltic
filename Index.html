@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es" class="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Voltic - Impulso Digital Contigo</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amaranth:wght@400;700&family=League+Spartan:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "voltic-teal": "#43CADB",
+              "voltic-purple-mid": "#8660E7",
+              "voltic-purple-dark": "#440885",
+              "voltic-purple-light": "#726ECD",
+              "voltic-blue": "#382CCE",
+            },
+            fontFamily: {
+              amaranth: ["Amaranth", "sans-serif"],
+              spartan: ["League Spartan", "sans-serif"],
+            },
+            fontSize: {
+              "2xs": ".65rem",
+              "3xs": ".55rem",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-white">
+    <header
+      class="bg-black border-b border-gray-800 sticky top-0 z-50"
+      x-data="{ open: false }"
+    >
+      <nav
+        class="container mx-auto px-4 sm:px-6 py-3 flex justify-between items-center"
+      >
+        <a
+          href="#"
+          class="text-xl md:text-3xl font-bold font-amaranth bg-gradient-to-t from-voltic-teal to-voltic-purple-mid bg-clip-text text-transparent"
+        >
+          <img
+            src="assets/img/logo1.png"
+            alt="Voltic Logo"
+            class="h-6 md:h-8"
+          />
+        </a>
+        <div class="hidden sm:flex items-center space-x-2 md:space-x-6">
+          <a
+            href="#inicio"
+            class="text-gray-300 text-xs md:text-base font-medium font-spartan transition-all duration-300 hover:text-voltic-teal"
+            >Inicio</a
+          >
+          <a
+            href="#servicios"
+            class="text-gray-300 text-xs md:text-base font-medium font-spartan transition-all duration-300 hover:text-voltic-teal"
+            >Servicios</a
+          >
+          <a
+            href="#proyectos"
+            class="text-gray-300 text-xs md:text-base font-medium font-spartan transition-all duration-300 hover:text-voltic-teal"
+            >Proyectos</a
+          >
+          <a
+            href="#contacto"
+            class="bg-gradient-to-r from-voltic-purple-mid to-voltic-teal text-white font-bold font-spartan py-1 px-3 md:py-2 md:px-6 rounded-full transition-all duration-300 hover:opacity-90 uppercase text-xs md:text-sm transform hover:scale-105 hover:shadow-lg"
+            >Contáctanos</a
+          >
+        </div>
+        <div class="sm:hidden">
+          <button @click="open = !open" aria-label="Abrir menú">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6 text-white"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                x-show="!open"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              />
+              <path
+                x-show="open"
+                x-cloak
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </div>
+      </nav>
+      <div
+        x-show="open"
+        x-cloak
+        x-transition
+        @click.away="open = false"
+        class="absolute top-full left-0 right-0 bg-black border-b border-gray-800 shadow-lg sm:hidden"
+      >
+        <div class="flex flex-col space-y-4 p-6 text-center">
+          <a
+            href="#inicio"
+            @click="open = false"
+            class="text-gray-300 font-medium font-spartan hover:text-voltic-teal"
+            >Inicio</a
+          >
+          <a
+            href="#servicios"
+            @click="open = false"
+            class="text-gray-300 font-medium font-spartan hover:text-voltic-teal"
+            >Servicios</a
+          >
+          <a
+            href="#proyectos"
+            @click="open = false"
+            class="text-gray-300 font-medium font-spartan hover:text-voltic-teal"
+            >Proyectos</a
+          >
+          <a
+            href="#contacto"
+            @click="open = false"
+            class="bg-gradient-to-r from-voltic-purple-mid to-voltic-teal text-white font-bold font-spartan py-2 px-6 rounded-full transition-all duration-300 hover:opacity-90 uppercase text-sm transform hover:scale-105 hover:shadow-lg"
+            >Contáctanos</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section
+        id="inicio"
+        class="w-full flex items-center justify-center bg-white py-4 md:py-16 min-h-[calc(100vh-64px)] overflow-hidden px-2 md:px-6"
+      >
+        <div
+          class="w-2/5 flex-shrink-0 text-left"
+          data-aos="fade-up"
+        >
+          <h1
+            class="font-spartan font-black text-voltic-purple-dark leading-tight mb-2 md:mb-4
+              text-[clamp(0.6rem,3.5vw,3.75rem)]"
+          >
+            <span class="whitespace-nowrap">IMPULSO DIGITAL</span> <br />
+            AL ALCANCE DE<br />
+            TUS MANOS
+          </h1>
+
+          <p
+            class="font-spartan text-gray-700 mb-2 md:mb-6
+            text-[clamp(0.4rem,2vw,1.25rem)]"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            En Voltic nos preocupamos por el desarrollo de tu negocio, no dudes
+            en contactarnos.
+          </p>
+
+          <div
+            class="inline-block bg-black text-white font-spartan font-bold py-1 px-2 md:py-2 md:px-4 rounded-[10px_10px_10px_0] md:rounded-[20px_20px_20px_0] -rotate-3
+            text-[clamp(0.35rem,1.8vw,1rem)]"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <span>No solo construimos Webs, activamos negocios.</span>
+          </div>
+        </div>
+
+        <div
+          class="relative flex items-center justify-center w-3/5 h-full flex-shrink-0"
+          data-aos="zoom-in"
+        >
+          <img
+            src="assets/img/fondo-blob.png"
+            class="absolute z-10 w-full h-auto"
+            alt="Fondo decorativo"
+          />
+          <img
+            src="assets/img/hero.PNG"
+            class="relative z-20 w-10/12 h-auto"
+            alt="Modelo Voltic"
+          />
+        </div>
+      </section>
+    </main>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 800,
+        once: true,
+        offset: 50,
+      });
+    </script>
+  </body>
+</html>

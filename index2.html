@@ -1,0 +1,663 @@
+<style>
+  .hero {
+    height: 35rem;
+  }
+
+  .heroimg {
+    bottom: 1rem;
+    position: relative;
+  }
+</style>
+
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Voltic - Impulso Digital Contigo</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amaranth:wght@400;700&family=League+Spartan:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "voltic-teal": "#43CADB",
+              "voltic-purple-mid": "#8660E7",
+              "voltic-purple-dark": "#440885",
+              "voltic-purple-light": "#726ECD",
+              "voltic-blue": "#382CCE",
+            },
+            fontFamily: {
+              amaranth: ["Amaranth", "sans-serif"],
+              spartan: ["League Spartan", "sans-serif"],
+            },
+            // Añadimos tamaños de letra extra pequeños para el móvil
+            fontSize: {
+              "2xs": ".65rem",
+              "3xs": ".55rem",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-black">
+    <header class="bg-black border-b border-gray-800 sticky top-0 z-50" x-data="{ open: false }">
+      <nav class="container mx-auto px-2 sm:px-6 py-3 md:py-4 flex justify-between items-center">
+        <a
+          href="#"
+          class="text-xl md:text-3xl font-bold font-amaranth bg-gradient-to-t from-voltic-teal to-voltic-purple-mid bg-clip-text text-transparent"
+        >
+          Voltic
+        </a>
+
+        <div class="hidden sm:flex items-center space-x-2 md:space-x-6">
+          <a
+            href="#inicio"
+            class="text-gray-300 text-xs md:text-base font-medium font-spartan transition-all duration-300 hover:text-voltic-teal"
+          >
+            Inicio
+          </a>
+          <a
+            href="#servicios"
+            class="text-gray-300 text-xs md:text-base font-medium font-spartan transition-all duration-300 hover:text-voltic-teal"
+          >
+            Servicios
+          </a>
+          <a
+            href="#proyectos"
+            class="text-gray-300 text-xs md:text-base font-medium font-spartan transition-all duration-300 hover:text-voltic-teal"
+          >
+            Proyectos
+          </a>
+          <a
+            href="#contacto"
+            class="bg-gradient-to-r from-voltic-purple-mid to-voltic-teal text-white font-bold font-spartan py-1 px-3 md:py-2 md:px-6 rounded-full transition-all duration-300 hover:opacity-90 uppercase text-xs md:text-sm"
+          >
+            Contáctanos
+          </a>
+        </div>
+
+        <div class="sm:hidden">
+          <button @click="open = !open" aria-label="Abrir menú">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5 text-white"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                x-show="!open"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              />
+              <path
+                x-show="open"
+                x-cloak
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </div>
+      </nav>
+
+      <div
+        x-show="open"
+        x-cloak
+        x-transition
+        @click.away="open = false"
+        class="absolute top-full left-0 right-0 bg-black border-b border-gray-800 shadow-lg sm:hidden"
+      >
+        <div class="flex flex-col space-y-4 p-6">
+          <a
+            href="#inicio"
+            @click="open = false"
+            class="text-gray-300 font-medium font-spartan hover:text-voltic-teal"
+            >Inicio</a
+          >
+          <a
+            href="#servicios"
+            @click="open = false"
+            class="text-gray-300 font-medium font-spartan hover:text-voltic-teal"
+            >Servicios</a
+          >
+          <a
+            href="#proyectos"
+            @click="open = false"
+            class="text-gray-300 font-medium font-spartan hover:text-voltic-teal"
+            >Proyectos</a
+          >
+          <a
+            href="#contacto"
+            @click="open = false"
+            class="bg-gradient-to-r from-voltic-purple-mid to-voltic-teal text-white text-center font-bold font-spartan py-2 px-6 rounded-full uppercase"
+            >Contáctanos</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section
+        id="inicio"
+        class="hero grid bg-gradient-to-br from-white to-gray-200 text-black relative z-10 overflow-hidden"
+      >
+        <div
+          class="container mt-10 mx-auto max-w-7xl px-2 sm:px-6 grid grid-cols-1 md:grid-cols-12 gap-3 md:gap-0 h-full"
+        >
+          <div class="space-y-2 md:space-y-6 z-10 text-left md:col-span-6 lg:col-span-7">
+            <h1
+              class="text-2xl sm:text-3xl md:text-6xl lg:text-7xl font-extrabold font-spartan uppercase text-voltic-purple-dark leading-tight md:max-w-xl"
+            >
+              Impulso Digital al Alcance de tus Manos
+            </h1>
+            <p class="text-sm sm:text-base md:text-2xl text-gray-800 font-spartan max-w-md md:max-w-lg">
+              En Voltic nos preocupamos por el desarrollo de tu negocio, no dudes en contactarnos.
+            </p>
+
+            <div class="pt-1 md:pt-4">
+              <a
+                href="#contacto"
+                class="w-full md:w-auto text-center bg-gradient-to-r from-voltic-purple-mid to-voltic-teal text-white font-bold py-1 px-3 md:py-3 md:px-8 rounded-full transition duration-300 hover:opacity-90 uppercase text-xs md:text-base"
+              >
+                Contactar
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-blob md:col-span-6 lg:col-span-5 relative h-full flex justify-center">
+            <div
+              class="absolute w-[150%] md:w-[130%] lg:w-[150%] h-full md:bottom-[-20%] md:right-[-20%] lg:bottom-[-10%] lg:right-[-10%] z-0"
+            >
+              <svg
+                id="hero-blob"
+                class="absolute inset-0 w-full h-full object-contain"
+                viewBox="0 0 1000 1000"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill="#8660E7"
+                  d="M806.5,635.5Q688,771,531,809Q374,847,260.5,723.5Q147,600,165.5,459Q184,318,310,248.5Q436,179,568,179.5Q700,180,806.5,340Q913,500,806.5,635.5Z"
+                  transform="translate(0 0)"
+                />
+              </svg>
+            </div>
+            <img
+              src="assets/img/hero.PNG"
+              alt="Voltic Impulso Digital"
+              class="heroimg relative z-10 lg:w-full h-auto object-contain lg:scale-150"
+            />
+          </div>
+        </div>
+      </section>
+      <section
+        id="contacto-cintillo"
+        class="relative z-20 bg-gradient-to-r from-voltic-purple-mid to-voltic-teal py-6 md:py-8"
+      >
+        <div class="container mx-auto px-2 sm:px-6">
+          <div
+            class="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-3 sm:gap-4 md:gap-6 lg:gap-8"
+          >
+            <div
+              class="flex items-center space-x-2 md:space-x-2 text-2xs sm:text-xs md:text-base font-medium text-white"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-4 w-4 md:h-5 md:w-5"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  d="M2.003 5.884L10 10.884l7.997-5H2.003zM18 7.116l-8 4.884-8-4.884V14a2 2 0 002 2h12a2 2 0 002-2V7.116z"
+                />
+              </svg>
+              <span>Voltic202513@gmail.com</span>
+            </div>
+            <div
+              class="flex items-center space-x-2 md:space-x-2 text-2xs sm:text-xs md:text-base font-medium text-white"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-4 w-4 md:h-5 md:w-5"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10 5a5 5 0 100 10 5 5 0 000-10zm0 8a3 3 0 100-6 3 3 0 000 6z"
+                  clip-rule="evenodd"
+                />
+                <path d="M16.5 5.5a1 1 0 100-2 1 1 0 000 2z" />
+                <path
+                  fill-rule="evenodd"
+                  d="M10 0C4.477 0 0 4.477 0 10s4.477 10 10 10 10-4.477 10-10S15.523 0 10 0zm0 18a8 8 0 100-16 8 8 0 000 16z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <span>Voltic202513</span>
+            </div>
+            <div
+              class="flex items-center space-x-2 md:space-x-2 text-2xs sm:text-xs md:text-base font-medium text-white"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-4 w-4 md:h-5 md:w-5"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C6.477 18 2 13.523 2 8V3z"
+                />
+              </svg>
+              <span>04144489708</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="nosotros"
+        class="bg-gradient-to-r from-voltic-purple-mid to-voltic-blue py-10 md:py-20 lg:py-24 text-white overflow-hidden"
+      >
+        <div class="container mx-auto px-2 sm:px-6 grid grid-cols-2 gap-3 md:gap-12 items-center">
+          <div class="space-y-2 md:space-y-6 text-left z-10">
+            <h2
+              class="text-lg sm:text-2xl md:text-5xl lg:text-7xl font-extrabold font-spartan uppercase leading-tight text-voltic-purple-dark"
+            >
+              Conoce más <br class="hidden lg:block" />
+              sobre de nosotros
+            </h2>
+            <p class="text-2xs sm:text-xs md:text-lg font-spartan max-w-lg text-gray-100">
+              Voltic es una <span class="text-yellow-300 font-bold">xxxx</span> fundada en el año 2025 cuyo
+              principal objetivo es el de ofrecer a los negocios la posibilidad de obtener a la medidda el
+              sitio Web de sus sueños
+            </p>
+            <a
+              href="#saber-mas"
+              class="inline-block mt-2 md:mt-8 bg-black text-white font-bold font-spartan py-1 px-3 md:py-3 md:px-8 rounded-full transition duration-300 hover:opacity-90 uppercase text-xs md:text-base"
+            >
+              Saber más
+            </a>
+          </div>
+
+          <div class="relative flex items-center justify-center">
+            <svg
+              class="absolute w-full h-full object-contain -right-10 top-1/2 -translate-y-1/2 z-0 opacity-80"
+              viewBox="0 0 1000 1000"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill="#5a37b3"
+                d="M806.5,635.5Q688,771,531,809Q374,847,260.5,723.5Q147,600,165.5,459Q184,318,310,248.5Q436,179,568,179.5Q700,180,806.5,340Q913,500,806.5,635.5Z"
+                transform="translate(0 0) scale(1.1)"
+              />
+            </svg>
+            <img
+              src="assets/img/IMG_2553.PNG"
+              alt="Equipo Voltic desarrollando sitios web"
+              class="relative z-10 w-full h-auto object-contain"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="servicios"
+        class="relative bg-gradient-to-br from-voltic-purple-light to-voltic-teal py-10 md:py-20 lg:py-24 overflow-hidden"
+      >
+        <div class="absolute inset-0 z-0 flex items-center justify-center">
+          <img
+            src="assets/img/logo.png"
+            alt="Fondo Rayo Voltic"
+            class="w-1/2 h-1/2 object-contain opacity-10"
+          />
+        </div>
+
+        <div class="container mx-auto px-2 sm:px-6 relative z-10">
+          <div class="flex justify-center mb-6 md:mb-12 lg:mb-16">
+            <div class="bg-black rounded-full py-2 px-4 md:py-4 md:px-12">
+              <h2
+                class="text-white text-base sm:text-xl md:text-4xl lg:text-5xl font-bold font-spartan text-center"
+              >
+                Servicios que ofrecemos para ti
+              </h2>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-3 gap-2 md:gap-8 lg:gap-10">
+            <div
+              class="bg-white rounded-lg md:rounded-2xl shadow-xl overflow-hidden flex flex-col transition-all duration-300 hover:scale-[1.03]"
+            >
+              <img
+                src="https://via.placeholder.com/400x250/334155/FFFFFF?text=Desarrollo+Web"
+                alt="Desarrollo Web"
+                class="w-full h-16 md:h-48 object-cover"
+              />
+              <div class="p-2 md:p-6 flex flex-col flex-grow">
+                <h3
+                  class="text-xs sm:text-sm md:text-2xl font-bold font-spartan text-voltic-purple-dark mb-1 md:mb-3 text-left"
+                >
+                  Desarrollo Web
+                </h3>
+                <p
+                  class="font-spartan text-gray-600 flex-grow text-left text-3xs sm:text-2xs md:text-base leading-tight"
+                >
+                  Voltic es una xxxx fundada en el año 2025...
+                </p>
+                <div class="mt-2 md:mt-6 text-center">
+                  <a
+                    href="#"
+                    class="bg-white shadow-md text-voltic-blue font-bold font-spartan py-1 px-2 md:py-2 md:px-5 rounded-full inline-flex items-center space-x-1 md:space-x-2 hover:shadow-lg hover:scale-105 transition-all text-2xs md:text-base"
+                  >
+                    <span>NEXT</span>
+                    <span class="text-xs md:text-xl">&rarr;</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="bg-white rounded-lg md:rounded-2xl shadow-xl overflow-hidden flex flex-col transition-all duration-300 hover:scale-[1.03]"
+            >
+              <img
+                src="https://via.placeholder.com/400x250/1E40AF/FFFFFF?text=Consultoría"
+                alt="Consultoría"
+                class="w-full h-16 md:h-48 object-cover"
+              />
+              <div class="p-2 md:p-6 flex flex-col flex-grow">
+                <h3
+                  class="text-xs sm:text-sm md:text-2xl font-bold font-spartan text-voltic-purple-dark mb-1 md:mb-3 text-left"
+                >
+                  Consultoría
+                </h3>
+                <p
+                  class="font-spartan text-gray-600 flex-grow text-left text-3xs sm:text-2xs md:text-base leading-tight"
+                >
+                  Voltic es una xxxx fundada en el año 2025...
+                </p>
+                <div class="mt-2 md:mt-6 text-center">
+                  <a
+                    href="#"
+                    class="bg-white shadow-md text-voltic-blue font-bold font-spartan py-1 px-2 md:py-2 md:px-5 rounded-full inline-flex items-center space-x-1 md:space-x-2 hover:shadow-lg hover:scale-105 transition-all text-2xs md:text-base"
+                  >
+                    <span>NEXT</span>
+                    <span class="text-xs md:text-xl">&rarr;</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="bg-white rounded-lg md:rounded-2xl shadow-xl overflow-hidden flex flex-col transition-all duration-300 hover:scale-[1.03]"
+            >
+              <img
+                src="https://via.placeholder.com/400x250/065F46/FFFFFF?text=SEO"
+                alt="SEO"
+                class="w-full h-16 md:h-48 object-cover"
+              />
+              <div class="p-2 md:p-6 flex flex-col flex-grow">
+                <h3
+                  class="text-xs sm:text-sm md:text-2xl font-bold font-spartan text-voltic-purple-dark mb-1 md:mb-3 text-left"
+                >
+                  SEO
+                </h3>
+                <p
+                  class="font-spartan text-gray-600 flex-grow text-left text-3xs sm:text-2xs md:text-base leading-tight"
+                >
+                  Voltic es una xxxx fundada en el año 2025...
+                </p>
+                <div class="mt-2 md:mt-6 text-center">
+                  <a
+                    href="#"
+                    class="bg-white shadow-md text-voltic-blue font-bold font-spartan py-1 px-2 md:py-2 md:px-5 rounded-full inline-flex items-center space-x-1 md:space-x-2 hover:shadow-lg hover:scale-105 transition-all text-2xs md:text-base"
+                  >
+                    <span>NEXT</span>
+                    <span class="text-xs md:text-xl">&rarr;</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="bg-white rounded-lg md:rounded-2xl shadow-xl overflow-hidden flex flex-col transition-all duration-300 hover:scale-[1.03]"
+            >
+              <img
+                src="https://via.placeholder.com/400x250/86198F/FFFFFF?text=Optimización"
+                alt="Optimización de sitios Webs"
+                class="w-full h-16 md:h-48 object-cover"
+              />
+              <div class="p-2 md:p-6 flex flex-col flex-grow">
+                <h3
+                  class="text-xs sm:text-sm md:text-2xl font-bold font-spartan text-voltic-purple-dark mb-1 md:mb-3 text-left"
+                >
+                  Optimización
+                </h3>
+                <p
+                  class="font-spartan text-gray-600 flex-grow text-left text-3xs sm:text-2xs md:text-base leading-tight"
+                >
+                  Voltic es una xxxx fundada en el año 2025...
+                </p>
+                <div class="mt-2 md:mt-6 text-center">
+                  <a
+                    href="#"
+                    class="bg-white shadow-md text-voltic-blue font-bold font-spartan py-1 px-2 md:py-2 md:px-5 rounded-full inline-flex items-center space-x-1 md:space-x-2 hover:shadow-lg hover:scale-105 transition-all text-2xs md:text-base"
+                  >
+                    <span>NEXT</span>
+                    <span class="text-xs md:text-xl">&rarr;</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="bg-white rounded-lg md:rounded-2xl shadow-xl overflow-hidden flex flex-col transition-all duration-300 hover:scale-[1.03]"
+            >
+              <img
+                src="https://via.placeholder.com/400x250/1F2937/FFFFFF?text=Mantenimiento"
+                alt="Mantenimiento de sitios Webs"
+                class="w-full h-16 md:h-48 object-cover"
+              />
+              <div class="p-2 md:p-6 flex flex-col flex-grow">
+                <h3
+                  class="text-xs sm:text-sm md:text-2xl font-bold font-spartan text-voltic-purple-dark mb-1 md:mb-3 text-left"
+                >
+                  Mantenimiento
+                </h3>
+                <p
+                  class="font-spartan text-gray-600 flex-grow text-left text-3xs sm:text-2xs md:text-base leading-tight"
+                >
+                  Voltic es una xxxx fundada en el año 2025...
+                </p>
+                <div class="mt-2 md:mt-6 text-center">
+                  <a
+                    href="#"
+                    class="bg-white shadow-md text-voltic-blue font-bold font-spartan py-1 px-2 md:py-2 md:px-5 rounded-full inline-flex items-center space-x-1 md:space-x-2 hover:shadow-lg hover:scale-105 transition-all text-2xs md:text-base"
+                  >
+                    <span>NEXT</span>
+                    <span class="text-xs md:text-xl">&rarr;</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="bg-white rounded-lg md:rounded-2xl shadow-xl overflow-hidden flex flex-col transition-all duration-300 hover:scale-[1.03]"
+            >
+              <img
+                src="https://via.placeholder.com/400x250/BE123C/FFFFFF?text=Manejo+de+RRSS"
+                alt="Manejo de RRSS"
+                class="w-full h-16 md:h-48 object-cover"
+              />
+              <div class="p-2 md:p-6 flex flex-col flex-grow">
+                <h3
+                  class="text-xs sm:text-sm md:text-2xl font-bold font-spartan text-voltic-purple-dark mb-1 md:mb-3 text-left"
+                >
+                  Manejo de RRSS
+                </h3>
+                <p
+                  class="font-spartan text-gray-600 flex-grow text-left text-3xs sm:text-2xs md:text-base leading-tight"
+                >
+                  Voltic es una xxxx fundada en el año 2025...
+                </p>
+                <div class="mt-2 md:mt-6 text-center">
+                  <a
+                    href="#"
+                    class="bg-white shadow-md text-voltic-blue font-bold font-spartan py-1 px-2 md:py-2 md:px-5 rounded-full inline-flex items-center space-x-1 md:space-x-2 hover:shadow-lg hover:scale-105 transition-all text-2xs md:text-base"
+                  >
+                    <span>NEXT</span>
+                    <span class="text-xs md:text-xl">&rarr;</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="text-center mt-10 md:mt-20 lg:mt-24">
+            <h2 class="text-4xl md:text-6xl lg:text-7xl font-bold font-amaranth text-white">Voltic</h2>
+            <p class="text-sm md:text-xl lg:text-2xl font-spartan text-white tracking-widest uppercase">
+              Impulso Digital Contigo
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq" class="relative bg-black text-white py-10 md:py-20 lg:py-24 overflow-hidden">
+        <div class="absolute inset-0 z-0 flex items-center justify-end">
+          <img
+            src="assets/img/Voltic__1_-removebg-preview.png"
+            alt="Fondo Rayo Voltic"
+            class="w-full h-full object-contain opacity-10 blur-sm scale-125 -right-1/4"
+          />
+        </div>
+
+        <div
+          class="container mx-auto px-2 sm:px-6 relative z-10 grid grid-cols-2 gap-3 md:gap-12 lg:gap-16 items-center"
+        >
+          <div class="relative flex items-center justify-center">
+            <img
+              src="assets/img/hero.PNG"
+              alt="Voltic Soporte y Preguntas Frecuentes"
+              class="w-full h-auto object-contain"
+            />
+          </div>
+
+          <div class="relative z-20">
+            <div
+              class="inline-block bg-voltic-purple-dark rounded-lg md:rounded-2xl p-2 md:p-5 shadow-lg mb-4 md:mb-8"
+            >
+              <h2
+                class="text-base sm:text-2xl md:text-5xl font-extrabold font-spartan uppercase leading-tight text-white"
+              >
+                Preguntas<br />Frecuentes
+              </h2>
+            </div>
+
+            <div class="max-w-lg space-y-2 md:space-y-4">
+              <details class="group border-b border-gray-700 pb-1 md:pb-2">
+                <summary
+                  class="list-none flex items-center justify-between cursor-pointer bg-gradient-to-r from-voltic-purple-mid to-voltic-teal text-white font-bold font-spartan py-1 px-3 md:py-3 md:px-6 rounded-full text-2xs sm:text-xs md:text-base"
+                >
+                  <span>PREGUNTA FRECUENTE 1</span>
+                  <span class="text-sm md:text-2xl transition-transform duration-300 group-open:rotate-45"
+                    >+</span
+                  >
+                </summary>
+                <div
+                  class="grid grid-rows-[0fr] transition-all duration-300 ease-out group-open:grid-rows-[1fr]"
+                >
+                  <div class="overflow-hidden">
+                    <p class="text-gray-300 pt-2 md:pt-4 pb-1 md:pb-2 text-2xs sm:text-xs md:text-base">
+                      Aquí va la respuesta a la pregunta frecuente 1.
+                    </p>
+                  </div>
+                </div>
+              </details>
+              <details class="group border-b border-gray-700 pb-1 md:pb-2">
+                <summary
+                  class="list-none flex items-center justify-between cursor-pointer bg-gradient-to-r from-voltic-purple-mid to-voltic-teal text-white font-bold font-spartan py-1 px-3 md:py-3 md:px-6 rounded-full text-2xs sm:text-xs md:text-base"
+                >
+                  <span>PREGUNTA FRECUENTE 2</span>
+                  <span class="text-sm md:text-2xl transition-transform duration-300 group-open:rotate-45"
+                    >+</span
+                  >
+                </summary>
+                <div
+                  class="grid grid-rows-[0fr] transition-all duration-300 ease-out group-open:grid-rows-[1fr]"
+                >
+                  <div class="overflow-hidden">
+                    <p class="text-gray-300 pt-2 md:pt-4 pb-1 md:pb-2 text-2xs sm:text-xs md:text-base">
+                      Aquí va la respuesta a la pregunta frecuente 2.
+                    </p>
+                  </div>
+                </div>
+              </details>
+              <details class="group border-b border-gray-700 pb-1 md:pb-2">
+                <summary
+                  class="list-none flex items-center justify-between cursor-pointer bg-gradient-to-r from-voltic-purple-mid to-voltic-teal text-white font-bold font-spartan py-1 px-3 md:py-3 md:px-6 rounded-full text-2xs sm:text-xs md:text-base"
+                >
+                  <span>PREGUNTA FRECUENTE 3</span>
+                  <span class="text-sm md:text-2xl transition-transform duration-300 group-open:rotate-45"
+                    >+</span
+                  >
+                </summary>
+                <div
+                  class="grid grid-rows-[0fr] transition-all duration-300 ease-out group-open:grid-rows-[1fr]"
+                >
+                  <div class="overflow-hidden">
+                    <p class="text-gray-300 pt-2 md:pt-4 pb-1 md:pb-2 text-2xs sm:text-xs md:text-base">
+                      Aquí va la respuesta a la pregunta frecuente 3.
+                    </p>
+                  </div>
+                </div>
+              </details>
+              <details class="group border-b border-gray-700 pb-1 md:pb-2">
+                <summary
+                  class="list-none flex items-center justify-between cursor-pointer bg-gradient-to-r from-voltic-purple-mid to-voltic-teal text-white font-bold font-spartan py-1 px-3 md:py-3 md:px-6 rounded-full text-2xs sm:text-xs md:text-base"
+                >
+                  <span>PREGUNTA FRECUENTE 4</span>
+                  <span class="text-sm md:text-2xl transition-transform duration-300 group-open:rotate-45"
+                    >+</span
+                  >
+                </summary>
+                <div
+                  class="grid grid-rows-[0fr] transition-all duration-300 ease-out group-open:grid-rows-[1fr]"
+                >
+                  <div class="overflow-hidden">
+                    <p class="text-gray-300 pt-2 md:pt-4 pb-1 md:pb-2 text-2xs sm:text-xs md:text-base">
+                      Aquí va la respuesta a la pregunta frecuente 4.
+                    </p>
+                  </div>
+                </div>
+              </details>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-black py-10 border-t border-gray-800">
+      <div class="container mx-auto px-6 text-center text-gray-400">
+        <p class="font-bold font-amaranth text-xl text-voltic-teal mb-2">Voltic</p>
+        <p>&copy; 2024 Voltic. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+
+    <script>
+      // El script del scroll para el blob ya no es necesario con el nuevo posicionamiento absoluto estático.
+    </script>
+  </body>
+</html>
