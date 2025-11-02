@@ -5,14 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Voltic - Impulso Digital Contigo</title>
 
+    <link type="image/png" sizes="32x32" rel="icon" href=".../icons8-gmail-nuevo-color-32.png" />
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
-    
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Amaranth:wght@400;700&family=League+Spartan:wght@400;700;900&display=swap"
       rel="stylesheet"
     />
 
@@ -50,7 +51,7 @@
           href="#"
           class="text-3xl font-bold font-amaranth bg-gradient-to-t from-voltic-teal to-voltic-purple-mid bg-clip-text text-transparent"
         >
-          <img src="assets/img/logo1.png" alt="" class="h-[30px]" />
+          <img src="assets/img/logo1.png" alt="Voltic Logo" class="h-[30px]" />
         </a>
 
         <div class="hidden sm:flex items-center space-x-2 md:space-x-6">
@@ -146,7 +147,7 @@
     </header>
 
     <main>
-      <section id="inicio" class="relative bg-white text-black overflow-hidden">
+      <section id="inicio" class="relative bg-white text-black overflow-hidden min-h-[calc(100vh-64px)]">
         <div
           class="absolute top-1/4 left-0 w-72 h-72 bg-voltic-purple-mid rounded-full opacity-20 filter blur-3xl animate-blob"
         ></div>
@@ -154,7 +155,7 @@
           class="absolute top-1/2 right-0 w-96 h-96 bg-voltic-teal rounded-full opacity-20 filter blur-3xl animate-blob animation-delay-4000"
         ></div>
 
-        <div class="container mx-auto px-6 pt-10 pb-20 md:pt-16 md:pb-32 relative z-10">
+        <div class="container mx-auto px-6 pt-10 pb-48 md:pt-16 md:pb-56 relative z-10">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             <div class="text-center md:text-left" data-aos="fade-right">
               <span
@@ -200,7 +201,7 @@
             >
               <img
                 src="assets/img/fondo-blob.png"
-                class="absolute z-10 w-full max-w-2xl transform"
+                class="absolute z-10 w-full max-w-2xl transform animate-blob"
                 alt="Fondo decorativo"
               />
               <img
@@ -208,6 +209,59 @@
                 class="relative z-20 w-12/12 md:w-11/12 h-auto scale-125 top-[100px]"
                 alt="Modelo Voltic"
               />
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="hidden lg:block absolute bottom-0 left-0 w-full z-20"
+          data-aos="fade-up"
+          data-aos-delay="300"
+        >
+          <div class="bg-white/50 backdrop-blur-xl shadow-xl border-t border-white/30">
+            <div class="container mx-auto px-6 py-5">
+              <div class="flex flex-col lg:flex-row items-center justify-center lg:justify-between gap-6">
+                <a
+                  href="mailto:Voltic202513@gmail.com"
+                  class="flex items-center gap-2 text-gray-800 hover:text-voltic-blue transition-colors"
+                >
+                  <img
+                    width="28"
+                    height="28"
+                    src="https://img.icons8.com/color/48/gmail-new.png"
+                    alt="gmail-new"
+                  />
+                  <span class="font-spartan text-lg font-bold font-medium">Voltic202513@gmail.com</span>
+                </a>
+
+                <a
+                  href="https://instagram.com/Voltic202513"
+                  target="_blank"
+                  class="flex items-center gap-2 text-gray-800 hover:text-voltic-blue transition-colors"
+                >
+                  <img
+                    width="28"
+                    height="28"
+                    src="https://img.icons8.com/fluency/48/instagram-new.png"
+                    alt="instagram-new"
+                  />
+                  <span class="font-spartan font-bold text-lg font-medium">Voltic202513</span>
+                </a>
+
+                <a
+                  href="https://wa.me/584144489708"
+                  target="_blank"
+                  class="flex items-center gap-2 text-gray-800 hover:text-voltic-blue transition-colors"
+                >
+                  <img
+                    width="28"
+                    height="28"
+                    src="https://img.icons8.com/color/48/whatsapp--v1.png"
+                    alt="whatsapp--v1"
+                  />
+                  <span class="font-spartan text-lg font-bold font-medium">04144489708</span>
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -223,15 +277,15 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init({
-        duration: 800, // Duración de la animación en ms
-        once: true, // Si la animación debe ocurrir solo una vez
+        duration: 800,
+        once: true,
         offset: 50,
       });
     </script>
 
     <style>
       .animate-blob {
-        animation: blob 10s infinite;
+        animation: blob 100s infinite;
       }
       .animation-delay-4000 {
         animation-delay: -4s;
@@ -241,10 +295,10 @@
           transform: translate(0px, 0px) scale(1);
         }
         33% {
-          transform: translate(30px, -50px) scale(1.2);
+          transform: translate(10px, -15px) scale(1.05);
         }
         66% {
-          transform: translate(-20px, 20px) scale(0.8);
+          transform: translate(-10px, 10px) scale(0.95);
         }
         100% {
           transform: translate(0px, 0px) scale(1);
