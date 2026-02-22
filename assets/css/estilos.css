@@ -1,0 +1,63 @@
+.animate-blob {
+  animation: blob 100s infinite;
+}
+.animation-delay-4000 {
+  animation-delay: -4s;
+}
+@keyframes blob {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(10px, -15px) scale(1.05);
+  }
+  66% {
+    transform: translate(-10px, 10px) scale(0.95);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
+/* Oculta los tabs inactivos */
+[x-cloak] {
+  display: none !important;
+}
+
+/* 1. Animación flotante para los "blobs" de fondo */
+  .animate-blob {
+    animation: blob 100s infinite;
+  }
+  .animation-delay-4000 {
+    animation-delay: -4s;
+  }
+  @keyframes blob {
+    0% { transform: translate(0px, 0px) scale(1); }
+    33% { transform: translate(10px, -15px) scale(1.05); }
+    66% { transform: translate(-10px, 10px) scale(0.95); }
+    100% { transform: translate(0px, 0px) scale(1); }
+  }
+
+  /*
+    2. ANIMACIÓN DEL CINTILLO (Marquesina)
+  */
+  .animate-scroll-x {
+    /* Ajusta '40s' para ir más rápido o más lento */
+    animation: scroll-x 40s linear infinite;
+  }
+
+  /* 3. DEFINICIÓN de la animación del cintillo
+  */
+  @keyframes scroll-x {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  /* Oculta los tabs inactivos */
+  [x-cloak] {
+    display: none !important;
+  }
