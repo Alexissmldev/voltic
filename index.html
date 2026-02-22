@@ -196,138 +196,118 @@
     <main>
       <section
         id="inicio"
-        class="relative bg-white text-black overflow-hidden min-h-[calc(100vh-64px)]"
+        class="relative bg-white text-black min-h-[calc(100vh-64px)] flex items-center overflow-hidden pb-20 lg:pb-0"
       >
-        <div
-          class="absolute top-1/4 left-0 w-72 h-72 bg-voltic-purple-mid rounded-full opacity-20 filter blur-3xl animate-blob"
-        ></div>
-        <div
-          class="absolute top-1/2 right-0 w-96 h-96 bg-voltic-teal rounded-full opacity-20 filter blur-3xl animate-blob animation-delay-4000"
-        ></div>
+        <div class="absolute inset-0 overflow-hidden pointer-events-none">
+          <div
+            class="absolute top-1/4 -left-20 w-80 h-80 bg-voltic-purple-mid rounded-full opacity-10 filter blur-3xl animate-blob"
+          ></div>
+          <div
+            class="absolute bottom-1/4 -right-20 w-96 h-96 bg-voltic-teal rounded-full opacity-10 filter blur-3xl animate-blob animation-delay-4000"
+          ></div>
+        </div>
 
-        <div
-          class="container mx-auto px-6 pt-10 pb-20 md:pt-16 md:pb-32 relative z-10"
-        >
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-            <div class="text-center md:text-left" data-aos="fade-right">
+        <div class="container mx-auto px-6 relative z-10 py-16 lg:py-0">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div
+              class="text-center lg:text-left lg:col-span-7"
+              data-aos="fade-right"
+            >
               <span
-                class="inline-block bg-gray-100 border border-gray-200 text-voltic-purple-mid font-medium text-sm px-4 py-1 rounded-full mb-6"
+                class="inline-block bg-gray-50 border border-gray-200 text-voltic-purple-mid font-bold text-[10px] uppercase tracking-widest px-3 py-1 rounded-full mb-3"
               >
-                No solo construimos Webs, activamos negocios
+                Software a Medida & Gestión Operativa
               </span>
 
               <h1
-                class="font-spartan font-black text-4xl sm:text-5xl lg:text-6xl leading-tight mb-6"
+                class="font-spartan font-black text-3xl sm:text-5xl lg:text-6xl xl:text-7xl leading-[1.1] mb-4 tracking-tighter text-gray-900"
               >
-                IMPULSO DIGITAL AL
+                DEJA DE ESTANCARTE EN <br class="hidden lg:block" />
                 <span
-                  class="bg-gradient-to-r from-voltic-purple-mid to-voltic-teal bg-clip-text text-transparent"
-                  >ALCANCE</span
+                  class="bg-gradient-to-r from-voltic-purple-mid to-voltic-teal bg-clip-text text-transparent uppercase"
                 >
-                DE TUS MANOS
+                  PROCESOS LENTOS </span
+                >.
               </h1>
 
-              <p class="text-lg md:text-xl text-gray-600 mb-10">
-                En Voltic nos preocupamos por el desarrollo de tu negocio.
-                Convertimos tus ideas en soluciones digitales exitosas.
+              <p
+                class="text-sm md:text-lg text-gray-600 mb-6 leading-relaxed max-w-lg mx-auto lg:mx-0 font-medium"
+              >
+                Mientras tú operas manualmente, tu competencia escala. Creamos
+                landing pages que venden y sistemas que administran tu éxito sin
+                errores. <strong>Es momento de tomar el control total.</strong>
               </p>
 
               <div
-                class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start"
+                class="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start"
               >
+                <a
+                  href="#contacto"
+                  class="py-3 px-8 font-bold font-spartan uppercase text-sm rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-2xl bg-gray-900 text-white"
+                >
+                  Diagnóstico Gratis
+                </a>
                 <a
                   href="#servicios"
-                  class="py-3 px-8 font-bold font-spartan uppercase text-base rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-lg bg-gradient-to-r from-voltic-purple-mid to-voltic-teal text-white"
+                  class="py-3 px-8 font-bold font-spartan uppercase text-sm rounded-full transition-all duration-300 transform hover:scale-105 bg-white text-gray-800 hover:bg-gray-50 border border-gray-200 shadow-sm"
                 >
-                  Ver Servicios
-                </a>
-                <!-- <a
-                  href="#proyectos"
-                  class="py-3 px-8 font-bold font-spartan uppercase text-base rounded-full transition-all duration-300 transform hover:scale-105 bg-gray-100 text-gray-700 hover:bg-gray-200"
-                >
-                  Nuestros Proyectos
-                </a> -->
-              </div>
-
-              <div
-                class="flex items-center justify-center md:justify-start gap-10 mt-10"
-                data-aos="fade-up"
-                data-aos-delay="200"
-              >
-                <a
-                  href="mailto:Voltic202513@gmail.com"
-                  class="bg-gray-100 p-3 rounded-full shadow-lg transform transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
-                  aria-label="Enviar correo a Voltic"
-                >
-                  <img
-                    width="32"
-                    height="32"
-                    src="https://img.icons8.com/color/48/gmail-new.png"
-                    alt="gmail-new"
-                  />
-                </a>
-
-                <a
-                  href="https://instagram.com/Voltic202513"
-                  target="_blank"
-                  class="bg-gray-100 p-3 rounded-full shadow-lg transform transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
-                  aria-label="Ir al Instagram de Voltic"
-                >
-                  <img
-                    width="32"
-                    height="32"
-                    src="https://img.icons8.com/fluency/48/instagram-new.png"
-                    alt="instagram-new"
-                  />
-                </a>
-
-                <a
-                  href="https://wa.me/584144489708"
-                  target="_blank"
-                  class="bg-gray-100 p-3 rounded-full shadow-lg transform transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
-                  aria-label="Contactar a Voltic por WhatsApp"
-                >
-                  <img
-                    width="32"
-                    height="32"
-                    src="https://img.icons8.com/color/48/whatsapp--v1.png"
-                    alt="whatsapp--v1"
-                  />
+                  Ver Soluciones
                 </a>
               </div>
             </div>
 
             <div
-              class="hidden md:flex relative items-center justify-center"
+              class="hidden lg:flex relative items-center justify-center lg:col-span-5 h-full"
               data-aos="fade-left"
-              data-aos-delay="200"
             >
               <img
                 src="assets/img/fondo-blob.png"
                 loading="lazy"
-                class="absolute z-10 w-full max-w-2xl transform animate-blob"
-                alt="Fondo decorativo"
+                class="absolute z-10 w-[130%] max-w-none opacity-30 pointer-events-none -right-20 top-1/2 transform -translate-y-1/2 scale-110"
+                alt="Decor"
               />
               <img
                 src="assets/img/modelo1.webp"
                 loading="lazy"
-                class="relative z-20 w-12/12 md:w-11/12 h-auto scale-125 top-[100px]"
-                alt="Modelo Voltic"
+                class="relative z-20 w-auto h-full max-h-[50vh] xl:max-h-[60vh] object-contain drop-shadow-2xl"
+                alt="Voltic"
               />
             </div>
           </div>
+        </div>
+
+        <div
+          class="absolute bottom-0 left-0 w-full overflow-hidden leading-[0]"
+        >
+          <svg
+            class="relative block w-full h-[40px] lg:h-[80px]"
+            data-name="Layer 1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1200 120"
+            preserveAspectRatio="none"
+          >
+            <path
+              d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C58.47,113.16,145.69,125.18,210,115.11,274.31,105,273.1,65.37,321.39,56.44Z"
+              class="fill-gray-50"
+            ></path>
+          </svg>
         </div>
       </section>
 
       <section
         id="servicios"
-        class="bg-gradient-to-b from-[#F4F2FF] to-[#F0FDFE] py-20"
+        class="bg-gray-50 py-12 lg:py-16 min-h-screen lg:min-h-0 flex items-center overflow-hidden"
       >
         <div class="container mx-auto px-6">
-          <div class="text-center mb-12">
-            <span class="font-bold uppercase text-3xl text-voltic-purple-mid"
-              >Nuestros Servicios</span
+          <div class="mb-10 lg:mb-12" data-aos="fade-up">
+            <h2
+              class="font-spartan font-black text-3xl md:text-5xl text-gray-900 leading-none tracking-tighter"
             >
+              SISTEMAS DISEÑADOS <br />
+              <span class="text-voltic-purple-mid uppercase"
+                >PARA FACTURAR</span
+              >
+            </h2>
           </div>
 
           <div
@@ -336,284 +316,191 @@
         services: [
           {
             id: 1,
-            title: 'Desarrollo Web',
-            longTitle: 'Desarrollo Web a la Medida',
-            shortDesc: 'Sitios web y tiendas online a medida.',
+            title: 'Landings & Gestión',
+            shortDesc: 'Captación y administración total.',
             imageSrc: 'assets/img/desarrollo_web.webp',
-            imageAlt: 'Desarrollo Web',
-            description: 'Creamos sitios web optimizados, rápidos y 100% responsivos. Desde Landing Pages hasta complejas tiendas de E-commerce, transformamos tu visión en una realidad digital que atrae y convierte visitantes.',
-            features: [
-              'Diseño de Tiendas Online (E-commerce)',
-              'Sitios Corporativos y Landing Pages'
-            ]
+            description: 'Desarrollamos landing pages que capturan clientes y sistemas administrativos que eliminan el caos manual. Todo integrado para que tu negocio no dependa de hojas de cálculo.',
+            features: ['Ventas en piloto automático', 'Optimizado para conexiones lentas']
           },
           {
             id: 2,
-            title: 'Consultoría',
-            longTitle: 'Consultoría Estratégica Digital',
-            shortDesc: 'Planes de acción y estrategia digital.',
+            title: 'Automatización',
+            shortDesc: 'Elimina el trabajo manual.',
             imageSrc: 'assets/img/consultoria.webp',
-            imageAlt: 'Consultoría',
-            description: '¿No sabes por dónde empezar? Analizamos tu negocio, tu competencia y tu audiencia para crear un plan de acción digital claro y efectivo que te permita alcanzar tus objetivos.',
-            features: [
-              'Análisis de Mercado y Competencia',
-              'Definición de Estrategia de Marca'
-            ]
+            description: 'Analizamos tus fugas de tiempo y dinero para automatizar procesos. Si tu equipo hace tareas repetitivas, estás perdiendo rentabilidad que el software puede salvar.',
+            features: ['Auditoría de ineficiencias', 'Flujos de trabajo automáticos', 'Reportes de métricas en tiempo real']
           },
           {
             id: 3,
-            title: 'SEO',
-            longTitle: 'Posicionamiento SEO',
-            shortDesc: 'Posicionamiento en buscadores.',
+            title: 'Visibilidad SEO',
+            shortDesc: 'Domina las búsquedas locales.',
             imageSrc: 'assets/img/seo.webp',
-            imageAlt: 'SEO',
-            description: 'Hacemos que tu negocio aparezca en las primeras posiciones de Google. Más visibilidad significa más clientes. Optimizamos tu sitio para que tu público objetivo te encuentre.',
-            features: [
-              'Auditoría SEO On-Page y Off-Page',
-              'Estrategia de Link Building'
-            ]
+            description: 'No sirve tener un sistema si nadie lo encuentra. Posicionamos tu marca en Google para que los clientes te encuentren a ti antes que a tu competencia.',
+            features: ['SEO en Venezuela e Interior', 'Velocidad de carga extrema', 'Contenido enfocado en conversión']
           },
           {
             id: 4,
-            title: 'Mantenimiento de sitios Webs',
-            longTitle: 'Mantenimiento de Sitios Webs',
-            shortDesc: 'Actualizaciones, seguridad y soporte.',
+            title: 'Blindaje Digital',
+            shortDesc: 'Seguridad y soporte 24/7.',
             imageSrc: 'assets/img/soporte.webp',
-            imageAlt: 'Mantenimiento',
-            description: 'Nos encargamos de la salud de tu sitio web para que tú te dediques a tu negocio. Mantenemos todo actualizado, seguro y funcionando sin problemas, con copias de seguridad y soporte constante.',
-            features: [
-              'Actualizaciones de Seguridad',
-              'Copias de Respaldo Diarias'
-            ]
-          },
-          {
-            id: 5,
-            title: 'Manejo de RRSS',
-            longTitle: 'Manejo de Redes Sociales (RRSS)',
-            shortDesc: 'Gestión de comunidad y contenido.',
-            imageSrc: 'assets/img/RRSS.webp',
-            imageAlt: 'RRSS',
-            description: 'Creamos y gestionamos contenido de valor para tus redes sociales. Construimos una comunidad sólida alrededor de tu marca, aumentamos tu alcance y conectamos con tus clientes.',
-            features: [
-              'Creación de Contenido y Parrillas',
-              'Gestión de Campañas (Facebook/Instagram Ads)'
-            ]
+            description: 'Un sistema caído es dinero perdido. Protegemos tu infraestructura contra ataques y mantenemos tu operación activa sin interrupciones.',
+            features: ['Seguridad anti-hackeo', 'Copias de seguridad diarias', 'Soporte técnico inmediato']
           }
         ]
       }"
+            class="flex flex-col lg:flex-row gap-6 lg:items-stretch"
           >
-            <div class="lg:hidden flex flex-col gap-3">
+            <div
+              class="lg:w-1/3 flex flex-row lg:flex-col gap-3 overflow-x-auto lg:overflow-x-visible pb-4 lg:pb-0 scrollbar-hide"
+            >
               <template x-for="service in services" :key="service.id">
-                <div class="bg-white rounded-lg shadow">
-                  <button
-                    @click="tab = (tab === service.id ? null : service.id)"
-                    class="p-4 w-full text-left flex justify-between items-center"
-                  >
-                    <h4
-                      class="font-spartan font-bold text-base text-voltic-purple-dark"
-                      x-text="service.title"
-                    ></h4>
-                    <svg
-                      :class="{ 'rotate-180': tab === service.id }"
-                      class="w-5 h-5 text-voltic-purple-mid transition-transform"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                        clip-rule="evenodd"
-                      />
-                    </svg>
-                  </button>
-
-                  <div
-                    x-show="tab === service.id"
-                    x-transition:enter="transition-opacity ease-out duration-150"
-                    x-transition:enter-start="opacity-0"
-                    x-transition:enter-end="opacity-100"
-                    x-transition:leave="transition-opacity ease-in duration-150"
-                    x-transition:leave-start="opacity-100"
-                    x-transition:leave-end="opacity-0"
-                    x-cloak
-                    class="p-4 border-t border-gray-100"
-                  >
-                    <img
-                      :src="service.imageSrc"
-                      :alt="service.imageAlt"
-                      loading="lazy"
-                      class="rounded-lg shadow-xl mb-6 w-full max-h-[350px] object-cover"
-                    />
-                    <h3
-                      class="font-spartan font-black text-2xl text-voltic-purple-dark mb-3"
-                      x-text="service.longTitle"
-                    ></h3>
-                    <p
-                      class="text-gray-700 text-base mb-5"
-                      x-text="service.description"
-                    ></p>
-                    <ul class="space-y-2">
-                      <template
-                        x-for="feature in service.features"
-                        :key="feature"
-                      >
-                        <li class="flex items-center gap-3">
-                          <svg
-                            class="w-5 h-5 text-voltic-teal"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                          >
-                            <path
-                              fill-rule="evenodd"
-                              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                              clip-rule="evenodd"
-                            ></path>
-                          </svg>
-                          <span class="text-gray-700" x-text="feature"></span>
-                        </li>
-                      </template>
-                    </ul>
-                  </div>
-                </div>
+                <button
+                  @click="tab = service.id"
+                  :class="tab === service.id ? 'bg-gray-900 text-white shadow-lg lg:translate-x-2' : 'bg-white text-gray-500 border border-gray-100'"
+                  class="flex-shrink-0 lg:flex-shrink-1 p-4 lg:p-6 rounded-2xl transition-all duration-300 text-left min-w-[200px] lg:min-w-0"
+                >
+                  <h4
+                    class="font-spartan font-bold text-sm lg:text-base mb-1"
+                    x-text="service.title"
+                  ></h4>
+                  <p
+                    class="text-[10px] lg:text-xs opacity-70 font-medium"
+                    x-text="service.shortDesc"
+                  ></p>
+                </button>
               </template>
             </div>
 
-            <div class="hidden lg:flex flex-row gap-12 lg:gap-16 items-start">
-              <div class="w-full lg:w-2/3">
-                <template x-for="service in services" :key="service.id">
+            <div
+              class="lg:w-2/3 bg-white p-6 lg:p-10 rounded-3xl border border-gray-100 shadow-xl lg:h-[480px] flex flex-col justify-center overflow-hidden"
+            >
+              <template x-for="service in services" :key="service.id">
+                <div
+                  x-show="tab === service.id"
+                  x-transition:enter="transition ease-out duration-200"
+                  x-transition:enter-start="opacity-0 translate-y-2"
+                  x-transition:enter-end="opacity-100 translate-y-0"
+                  class="h-full"
+                >
                   <div
-                    x-show="tab === service.id"
-                    x-transition:enter="transition-opacity ease-out duration-150"
-                    x-transition:enter-start="opacity-0"
-                    x-transition:enter-end="opacity-100"
-                    x-transition:leave="transition-opacity ease-in duration-150"
-                    x-transition:leave-start="opacity-100"
-                    x-transition:leave-end="opacity-0"
-                    x-cloak
+                    class="flex flex-col lg:flex-row gap-8 items-center h-full"
                   >
-                    <img
-                      :src="service.imageSrc"
-                      :alt="service.imageAlt"
-                      loading="lazy"
-                      class="rounded-lg shadow-xl mb-6 w-full max-h-[350px] object-cover"
-                    />
-                    <h3
-                      class="font-spartan font-black text-2xl text-voltic-purple-dark mb-3"
-                      x-text="service.longTitle"
-                    ></h3>
-                    <p
-                      class="text-gray-700 text-base mb-5"
-                      x-text="service.description"
-                    ></p>
-                    <ul class="space-y-2">
-                      <template
-                        x-for="feature in service.features"
-                        :key="feature"
-                      >
-                        <li class="flex items-center gap-3">
-                          <svg
-                            class="w-5 h-5 text-voltic-teal"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                          >
-                            <path
-                              fill-rule="evenodd"
-                              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                              clip-rule="evenodd"
-                            ></path>
-                          </svg>
-                          <span class="text-gray-700" x-text="feature"></span>
-                        </li>
-                      </template>
-                    </ul>
+                    <div class="flex-1">
+                      <h3
+                        class="font-spartan font-black text-2xl lg:text-3xl text-gray-900 mb-4"
+                        x-text="service.title"
+                      ></h3>
+                      <p
+                        class="text-gray-600 text-sm lg:text-base mb-6 leading-relaxed"
+                        x-text="service.description"
+                      ></p>
+                      <ul class="space-y-3">
+                        <template
+                          x-for="feature in service.features"
+                          :key="feature"
+                        >
+                          <li class="flex items-center gap-3">
+                            <div
+                              class="bg-voltic-teal/10 p-1 rounded-full flex-shrink-0"
+                            >
+                              <svg
+                                class="w-4 h-4 text-voltic-teal"
+                                fill="currentColor"
+                                viewBox="0 0 20 20"
+                              >
+                                <path
+                                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                ></path>
+                              </svg>
+                            </div>
+                            <span
+                              class="text-gray-800 text-xs lg:text-sm font-bold"
+                              x-text="feature"
+                            ></span>
+                          </li>
+                        </template>
+                      </ul>
+                    </div>
+                    <div class="hidden lg:block lg:w-1/2 h-full">
+                      <img
+                        :src="service.imageSrc"
+                        class="w-full h-full object-cover rounded-2xl shadow-lg shadow-voltic-purple-mid/10"
+                      />
+                    </div>
                   </div>
-                </template>
-              </div>
-
-              <div class="w-full lg:w-1/3 flex flex-col gap-3">
-                <template x-for="service in services" :key="service.id">
-                  <button
-                    @click="tab = service.id"
-                    :class="{
-                'bg-voltic-purple-mid text-white shadow-xl scale-105': tab === service.id,
-                'bg-white text-gray-700 hover:bg-gray-100': tab !== service.id
-              }"
-                    class="p-4 rounded-lg transition-all duration-300 w-full text-left"
-                  >
-                    <h4
-                      class="font-spartan font-bold text-base mb-1"
-                      x-text="service.title"
-                    ></h4>
-                    <p
-                      class="text-sm opacity-90"
-                      x-text="service.shortDesc"
-                    ></p>
-                  </button>
-                </template>
-              </div>
+                </div>
+              </template>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="proyectos" class="relative bg-white py-24 overflow-hidden">
+      <section
+        id="proyectos"
+        class="relative bg-gradient-to-b from-[#F4F2FF] to-[#F0FDFE] py-16 md:py-24 overflow-hidden"
+      >
         <div
           class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full pointer-events-none"
         >
           <div
-            class="absolute top-1/4 left-0 w-72 h-72 bg-voltic-purple-mid rounded-full opacity-5 filter blur-3xl animate-blob"
+            class="absolute top-1/4 left-0 w-48 h-48 md:w-72 md:h-72 bg-voltic-purple-mid rounded-full opacity-5 filter blur-3xl animate-blob"
           ></div>
           <div
-            class="absolute bottom-1/4 right-0 w-96 h-96 bg-voltic-teal rounded-full opacity-5 filter blur-3xl animate-blob animation-delay-4000"
+            class="absolute bottom-1/4 right-0 w-64 h-64 md:w-96 md:h-96 bg-voltic-teal rounded-full opacity-5 filter blur-3xl animate-blob animation-delay-4000"
           ></div>
         </div>
 
         <div class="container mx-auto px-6 relative z-10">
-          <div class="mb-16 text-center md:text-left" data-aos="fade-up">
+          <div
+            class="mb-12 md:mb-16 text-center md:text-left"
+            data-aos="fade-up"
+          >
             <h2
-              class="font-spartan font-black text-4xl md:text-6xl text-black leading-tight uppercase"
+              class="font-spartan font-black text-3xl md:text-6xl text-black leading-tight uppercase tracking-tighter"
             >
-              Soluciones <br />
+              ACTIVOS DIGITALES <br class="hidden md:block" />
               <span
                 class="bg-gradient-to-r from-voltic-purple-mid to-voltic-teal bg-clip-text text-transparent"
-                >Desplegadas</span
               >
+                QUE GENERAN INGRESOS
+              </span>
             </h2>
-            <p class="text-gray-500 mt-6 max-w-2xl text-lg font-light">
-              Desde arquitecturas robustas de gestión hasta interfaces de
-              conversión masiva. Cada proyecto es un activo diseñado para
-              escalar.
+            <p
+              class="text-gray-500 mt-4 md:mt-6 max-w-2xl text-base md:text-lg font-medium leading-relaxed"
+            >
+              No entregamos solo código. Construimos las herramientas que tu
+              competencia ignora para capturar el mercado móvil y blindar tu
+              operación comercial.
             </p>
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
             <div class="md:col-span-7 group" data-aos="fade-up">
               <div
-                class="relative overflow-hidden rounded-[2rem] bg-gray-50 border border-gray-100 h-[450px] transition-all duration-500 hover:shadow-2xl hover:shadow-voltic-purple-mid/20"
+                class="relative overflow-hidden rounded-[2rem] bg-gray-50 border border-gray-100 min-h-[480px] md:h-[450px] transition-all duration-500 hover:shadow-2xl hover:shadow-voltic-purple-mid/20"
               >
-                <div class="p-10 flex flex-col h-full relative z-20">
+                <div class="p-8 md:p-10 flex flex-col h-full relative z-20">
                   <span
                     class="text-voltic-purple-mid font-bold text-xs uppercase tracking-[0.2em] font-spartan mb-2"
-                    >Fintech / Academy</span
+                    >Fintech / Gestión de Activos</span
                   >
                   <h3
-                    class="text-3xl font-black font-spartan text-black uppercase mb-4"
+                    class="text-2xl md:text-3xl font-black font-spartan text-black uppercase mb-4"
                   >
-                    Sistema Control de Pagos
+                    Blindaje de Flujo de Caja
                   </h3>
                   <p class="text-gray-600 text-sm max-w-sm mb-6">
-                    Gestión automatizada de mensualidades, reportes de morosidad
-                    y conciliación bancaria integrada.
+                    Gestión automatizada de ingresos para liquidar la morosidad
+                    y asegurar la liquidez inmediata que tu academia o negocio
+                    necesita hoy.
                   </p>
-
-                  <div class="mb-6">
+                  <div class="mb-8">
                     <a
-                      href="https://wa.me/584144489708?text=Hola%20Voltic,%20me%20gustaría%20solicitar%20una%20prueba%20gratis%20del%20Sistema%20de%20Control%20de%20Pagos"
+                      href="https://wa.me/584144489708?text=Hola%20Voltic,%20quiero%20blindar%20mi%20flujo%20de%20caja"
                       target="_blank"
                       class="inline-flex items-center gap-2 px-6 py-3 bg-voltic-purple-mid text-white font-spartan font-bold text-xs rounded-full hover:bg-black transition-colors duration-300"
                     >
-                      SOLICITAR PRUEBA GRATIS
+                      PROBAR SISTEMA DE PAGOS
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         class="h-4 w-4"
@@ -630,22 +517,21 @@
                       </svg>
                     </a>
                   </div>
-
-                  <div class="mt-auto flex gap-2">
+                  <div class="mt-auto flex flex-wrap gap-2">
                     <span
                       class="px-3 py-1 bg-white text-[10px] font-bold rounded-full border border-gray-200 uppercase font-spartan"
-                      >Laravel</span
+                      >Efectividad Operativa</span
                     >
                     <span
                       class="px-3 py-1 bg-white text-[10px] font-bold rounded-full border border-gray-200 uppercase font-spartan"
-                      >Mysql</span
+                      >Control de Morosidad</span
                     >
                   </div>
                 </div>
                 <img
                   src="assets/img/controlpago.png"
                   alt="Control de Pagos"
-                  class="absolute bottom-0 -right-0 w-2/3 h-74 object-cover rounded-tl-3xl shadow-2xl transition-transform duration-700 group-hover:scale-105 group-hover:-translate-y-2 z-10"
+                  class="absolute bottom-0 -right-4 w-3/4 md:w-2/3 h-auto object-cover rounded-tl-3xl shadow-2xl transition-transform duration-700 group-hover:scale-105 group-hover:-translate-y-2 z-10 opacity-40 md:opacity-100"
                   loading="lazy"
                 />
               </div>
@@ -662,26 +548,26 @@
                 class="block h-full"
               >
                 <div
-                  class="relative overflow-hidden rounded-[2rem] bg-gray-50 border border-gray-100 h-[450px] transition-all duration-500 hover:shadow-2xl hover:shadow-voltic-teal/20"
+                  class="relative overflow-hidden rounded-[2rem] bg-gray-50 border border-gray-100 min-h-[400px] md:h-[450px] transition-all duration-500 hover:shadow-2xl hover:shadow-voltic-teal/20"
                 >
-                  <div class="p-10">
+                  <div class="p-8 md:p-10">
                     <span
                       class="text-voltic-teal font-bold text-xs uppercase tracking-[0.2em] font-spartan mb-2"
-                      >Sector Primario</span
+                      >Captación de Clientes</span
                     >
                     <h3
-                      class="text-3xl font-black font-spartan text-black uppercase"
+                      class="text-2xl md:text-3xl font-black font-spartan text-black uppercase"
                     >
-                      Landing Agropecuaria
+                      Landing de Alta Conversión
                     </h3>
                     <p
                       class="text-xs text-voltic-teal mt-2 font-bold font-spartan uppercase tracking-widest"
                     >
-                      Visitar Proyecto →
+                      Ver estrategia de ventas →
                     </p>
                   </div>
                   <div
-                    class="absolute bottom-0 left-0 w-full h-64 overflow-hidden"
+                    class="absolute bottom-0 left-0 w-full h-48 md:h-64 overflow-hidden"
                   >
                     <img
                       src="assets/img/elhorizonte.png"
@@ -704,30 +590,30 @@
                 class="block h-full"
               >
                 <div
-                  class="relative overflow-hidden rounded-[2rem] bg-gray-900 h-[400px] transition-all duration-500"
+                  class="relative overflow-hidden rounded-[2rem] bg-gray-900 min-h-[350px] md:h-[400px] transition-all duration-500"
                 >
                   <img
                     src="assets/img/image.png"
                     alt="Farmacia"
-                    class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-700"
+                    class="absolute inset-0 w-full h-full object-cover opacity-50 md:opacity-60 group-hover:scale-110 transition-transform duration-700"
                     loading="lazy"
                   />
                   <div
-                    class="absolute inset-0 p-8 flex flex-col justify-end bg-gradient-to-t from-black via-black/20 to-transparent"
+                    class="absolute inset-0 p-8 flex flex-col justify-end bg-gradient-to-t from-black via-black/40 to-transparent"
                   >
                     <span
                       class="text-voltic-teal font-bold text-xs uppercase font-spartan mb-1"
-                      >Health & Care</span
+                      >E-commerce de Salud</span
                     >
                     <h3
                       class="text-xl font-black text-white font-spartan uppercase"
                     >
-                      FarmaSalud
+                      Disponibilidad Digital 24/7
                     </h3>
                     <p
                       class="text-[10px] text-gray-300 font-bold font-spartan uppercase tracking-widest"
                     >
-                      Explorar Demo →
+                      Explorar Demo de Venta →
                     </p>
                   </div>
                 </div>
@@ -740,31 +626,33 @@
               data-aos-delay="100"
             >
               <div
-                class="relative overflow-hidden rounded-[2rem] bg-gray-50 border border-gray-100 h-[400px] transition-all duration-500 hover:shadow-2xl"
+                class="relative overflow-hidden rounded-[2rem] bg-gray-50 border border-gray-100 min-h-[500px] md:h-[400px] transition-all duration-500 hover:shadow-2xl"
               >
                 <div class="flex flex-col md:flex-row h-full">
-                  <div class="p-10 md:w-1/2 flex flex-col h-full">
+                  <div class="p-8 md:p-10 md:w-1/2 flex flex-col h-full">
                     <span
                       class="text-voltic-purple-mid font-bold text-xs uppercase tracking-[0.2em] font-spartan mb-2"
-                      >Corporate Tool</span
+                      >Optimización Operativa</span
                     >
                     <h3
                       class="text-2xl font-black font-spartan text-black uppercase mb-4"
                     >
-                      Gestión de Reuniones
+                      Gestión de Rendimiento
                     </h3>
-                    <ul class="text-gray-500 text-xs space-y-2 mb-8">
-                      <li>• Calendario interactivo real-time</li>
-                      <li>• Control de asistencia con evidencias</li>
-                      <li>• Minutas automatizadas</li>
+                    <ul
+                      class="text-gray-500 text-[11px] md:text-xs font-bold space-y-2 mb-8 uppercase"
+                    >
+                      <li>• Cero pérdida de tiempo en minutas</li>
+                      <li>• Control de asistencia real-time</li>
+                      <li>• Evidencia digital de resultados</li>
                     </ul>
                     <div class="mt-auto">
                       <a
-                        href="https://wa.me/584144489708?text=Hola%20Voltic,%20me%20gustaría%20probar%20el%20Sistema%20de%20Gestión%20de%20Reuniones"
+                        href="https://wa.me/584144489708?text=Hola%20Voltic,%20necesito%20optimizar%20mis%20procesos%20operativos"
                         target="_blank"
                         class="inline-flex items-center gap-2 px-6 py-3 border-2 border-voltic-purple-mid text-voltic-purple-mid font-spartan font-bold text-xs rounded-full hover:bg-voltic-purple-mid hover:text-white transition-all duration-300"
                       >
-                        PROBAR DEMO
+                        REDUCIR INEFICIENCIA
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           class="h-4 w-4"
@@ -782,7 +670,7 @@
                       </a>
                     </div>
                   </div>
-                  <div class="md:w-1/2 bg-gray-200">
+                  <div class="h-48 md:h-full md:w-1/2 bg-gray-200">
                     <img
                       src="assets/img/unnamed.jpg"
                       alt="Reuniones"
@@ -801,26 +689,26 @@
                 class="block h-full"
               >
                 <div
-                  class="relative overflow-hidden rounded-[2rem] bg-white border-2 border-gray-50 h-[300px] transition-all duration-500 hover:border-voltic-teal hover:shadow-xl"
+                  class="relative overflow-hidden rounded-[2rem] bg-white border-2 border-gray-50 min-h-[280px] md:h-[300px] transition-all duration-500 hover:border-voltic-teal hover:shadow-xl"
                 >
                   <div class="p-8">
                     <span
                       class="text-voltic-teal font-bold text-xs uppercase tracking-[0.2em] font-spartan mb-2"
-                      >Real Estate</span
+                      >Real Estate Mobile-First</span
                     >
                     <h3
                       class="text-xl font-black font-spartan text-black uppercase"
                     >
-                      Agencia Inmobiliaria
+                      Cierre Inmobiliario Digital
                     </h3>
-                    <p class="text-gray-500 text-sm mt-2">
-                      Catálogo interactivo de propiedades con interfaz de alto
-                      impacto visual.
+                    <p class="text-gray-500 text-sm font-medium mt-2">
+                      Catálogo diseñado para que el cliente pase de Instagram a
+                      la cita en un solo clic.
                     </p>
                     <div
                       class="mt-6 flex items-center text-voltic-teal font-bold text-xs font-spartan uppercase tracking-widest"
                     >
-                      VER LANDING PAGE
+                      VER PROYECTO ROI
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         class="h-4 w-4 ml-2 group-hover:translate-x-2 transition-transform"
@@ -850,32 +738,53 @@
                 class="relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-voltic-purple-mid to-voltic-teal p-[1px]"
               >
                 <div
-                  class="bg-white rounded-[2rem] h-[298px] p-8 flex flex-col justify-center items-center text-center"
+                  class="bg-white rounded-[2rem] min-h-[280px] md:h-[298px] p-8 flex flex-col justify-center items-center text-center"
                 >
                   <h3
                     class="text-xl font-black font-spartan text-black uppercase"
                   >
-                    Portafolios de Marca
+                    Autoridad Digital de Marca
                   </h3>
-                  <p class="text-gray-500 text-sm mt-2 mb-6">
-                    Identidad digital personalizada para profesionales y marcas
-                    personales.
+                  <p class="text-gray-500 text-sm font-medium mt-2 mb-6">
+                    Interfaces que proyectan seguridad y dominan la percepción
+                    de tus clientes de alto valor.
                   </p>
                   <div class="flex -space-x-4">
                     <div
-                      class="w-12 h-12 rounded-full border-4 border-white bg-gray-100 shadow-sm"
+                      class="w-12 h-12 rounded-full border-4 border-white bg-voltic-purple-mid shadow-sm flex items-center justify-center text-white font-bold text-[8px]"
+                    >
+                      V
+                    </div>
+                    <div
+                      class="w-12 h-12 rounded-full border-4 border-white bg-voltic-teal shadow-sm"
                     ></div>
                     <div
-                      class="w-12 h-12 rounded-full border-4 border-white bg-gray-200 shadow-sm"
-                    ></div>
-                    <div
-                      class="w-12 h-12 rounded-full border-4 border-white bg-gray-300 shadow-sm"
+                      class="w-12 h-12 rounded-full border-4 border-white bg-gray-900 shadow-sm"
                     ></div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+        </div>
+
+        <div
+          class="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] pointer-events-none"
+        >
+          <svg
+            class="relative block w-full h-[40px] md:h-[80px]"
+            viewBox="0 0 1200 120"
+            preserveAspectRatio="none"
+          >
+            <path
+              d="M0,120 C300,110 600,110 1200,120 V120 H0 Z"
+              class="fill-voltic-teal opacity-10"
+            ></path>
+            <path
+              d="M0,120 C300,30 900,30 1200,120 V120 H0 Z"
+              class="fill-gray-50"
+            ></path>
+          </svg>
         </div>
       </section>
       <section id="sobre-nosotros" class="bg-white py-24 overflow-hidden">
@@ -884,30 +793,93 @@
             class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center"
           >
             <div data-aos="fade-right">
-              <h2
-                class="font-spartan font-black text-4xl md:text-5xl text-voltic-purple-dark mb-6 leading-tight"
+              <span
+                class="inline-block bg-voltic-purple-mid/10 text-voltic-purple-mid font-bold text-xs uppercase tracking-widest px-4 py-1 rounded-full mb-6"
               >
-                Conoce más
+                Nuestra Filosofía
+              </span>
+
+              <h2
+                class="font-spartan font-black text-4xl md:text-5xl text-gray-900 mb-8 leading-tight uppercase tracking-tighter"
+              >
+                ARQUITECTOS DE TU <br />
                 <span
                   class="bg-gradient-to-r from-voltic-purple-mid to-voltic-teal bg-clip-text text-transparent"
-                  >sobre nosotros</span
                 >
+                  RENTABILIDAD DIGITAL
+                </span>
               </h2>
 
-              <p class="text-lg text-gray-700 mb-8">
-                Voltic es una agencia fundada en el año 2025 cuyo principal
-                objetivo es el de ofrecer a los negocios la posibilidad de
-                obtener a la medida el sitio Web de sus sueños.
-              </p>
+              <div class="space-y-6 text-lg text-gray-700 font-medium">
+                <p>
+                  En Voltic no construimos "páginas bonitas". Desarrollamos la
+                  infraestructura tecnológica que permite que tu negocio opere
+                  sin depender de respuestas manuales ni procesos obsoletos.
+                </p>
+                <p
+                  class="border-l-4 border-voltic-teal pl-6 italic text-gray-500"
+                >
+                  Nacimos con un objetivo claro: transformar la forma en que las
+                  empresas venezolanas captan clientes y gestionan su
+                  administración, eliminando la fricción operativa que asfixia
+                  tu crecimiento.
+                </p>
+                <p>
+                  Entendemos que hoy, cada clic debe ser un depósito bancario.
+                  Por eso, nos enfocamos en sistemas que pagan su propia
+                  inversión mediante la eficiencia y el aumento real de tus
+                  ingresos.
+                </p>
+              </div>
+
+              <div class="mt-10">
+                <a
+                  href="#contacto"
+                  class="inline-flex items-center text-voltic-purple-mid font-bold font-spartan uppercase tracking-widest hover:text-voltic-teal transition-colors"
+                >
+                  Hablemos de tu próximo activo digital
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5 ml-2"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M14 5l7 7m0 0l-7 7m7-7H3"
+                    />
+                  </svg>
+                </a>
+              </div>
             </div>
 
-            <div data-aos="fade-left" data-aos-delay="200">
+            <div class="relative" data-aos="fade-left" data-aos-delay="200">
+              <div
+                class="absolute -inset-4 bg-gradient-to-tr from-voltic-purple-mid/20 to-voltic-teal/20 rounded-2xl blur-2xl opacity-50"
+              ></div>
+
               <img
                 src="assets/img/modelo2.webp"
-                alt="Equipo de Voltic"
+                alt="Estrategia Voltic"
                 loading="lazy"
-                class="rounded-xl shadow-2xl w-full h-auto"
+                class="relative z-10 rounded-2xl shadow-2xl w-full h-auto object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-500"
               />
+
+              <div
+                class="absolute -bottom-6 -left-6 bg-gray-900 text-white p-6 rounded-2xl shadow-xl z-20 hidden md:block"
+              >
+                <p class="font-spartan font-black text-3xl leading-none mb-1">
+                  100%
+                </p>
+                <p
+                  class="text-[10px] uppercase tracking-widest font-bold opacity-70"
+                >
+                  Enfoque en Resultados
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -989,69 +961,76 @@
             class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start"
           >
             <div data-aos="fade-right">
-              <h2
-                class="font-spartan font-black text-4xl md:text-5xl text-voltic-purple-dark mb-6 leading-tight"
+              <span
+                class="inline-block bg-voltic-purple-mid/10 text-voltic-purple-mid font-bold text-xs uppercase tracking-widest px-4 py-1 rounded-full mb-6"
               >
-                ¿Listo para
+                Paso Final
+              </span>
+              <h2
+                class="font-spartan font-black text-4xl md:text-5xl text-gray-900 mb-8 leading-tight uppercase tracking-tighter"
+              >
+                ¿LISTO PARA <br />
                 <span
                   class="bg-gradient-to-r from-voltic-purple-mid to-voltic-teal bg-clip-text text-transparent"
-                  >comenzar?</span
                 >
+                  DOMINAR TU MERCADO?
+                </span>
               </h2>
-              <p class="text-lg text-gray-700 mb-8">
-                Completa el formulario y nos pondremos en contacto contigo lo
-                antes posible para discutir cómo podemos llevar tu negocio al
-                siguiente nivel.
+              <p class="text-lg text-gray-700 mb-6 font-medium">
+                No te conformes con un sitio web que solo ocupa espacio.
+                Identifiquemos juntos las fugas de dinero en tu operación actual
+                y diseñemos el sistema que tu negocio necesita para escalar.
               </p>
-              <p class="text-lg text-gray-700">
-                Si prefieres, también puedes contactarnos directamente a través
-                de nuestras redes sociales o correo electrónico.
+              <p class="text-lg text-gray-700 mb-10">
+                Completa el formulario para recibir un
+                <strong>Diagnóstico de Rentabilidad Gratis</strong> o
+                contáctanos directamente por nuestras vías rápidas:
               </p>
 
-              <div class="flex items-center gap-6 mt-8">
+              <div class="flex items-center gap-6">
                 <a
                   href="mailto:Voltic202513@gmail.com"
-                  class="transform transition-transform hover:scale-110"
-                  aria-label="Enviar correo a Voltic"
+                  class="bg-white p-4 rounded-full shadow-md hover:shadow-xl hover:-translate-y-1 transition-all"
+                  aria-label="Email"
                 >
                   <img
                     width="32"
                     height="32"
                     src="https://img.icons8.com/color/48/gmail-new.png"
-                    alt="gmail-new"
+                    alt="gmail"
                   />
                 </a>
                 <a
                   href="https://instagram.com/Voltic202513"
                   target="_blank"
-                  class="transform transition-transform hover:scale-110"
-                  aria-label="Ir al Instagram de Voltic"
+                  class="bg-white p-4 rounded-full shadow-md hover:shadow-xl hover:-translate-y-1 transition-all"
+                  aria-label="Instagram"
                 >
                   <img
                     width="32"
                     height="32"
                     src="https://img.icons8.com/fluency/48/instagram-new.png"
-                    alt="instagram-new"
+                    alt="instagram"
                   />
                 </a>
                 <a
                   href="https://wa.me/584144489708"
                   target="_blank"
-                  class="transform transition-transform hover:scale-110"
-                  aria-label="Contactar a Voltic por WhatsApp"
+                  class="bg-white p-4 rounded-full shadow-md hover:shadow-xl hover:-translate-y-1 transition-all"
+                  aria-label="WhatsApp"
                 >
                   <img
                     width="32"
                     height="32"
                     src="https://img.icons8.com/color/48/whatsapp--v1.png"
-                    alt="whatsapp--v1"
+                    alt="whatsapp"
                   />
                 </a>
               </div>
             </div>
 
             <div
-              class="bg-gray-50 p-8 rounded-xl shadow-lg"
+              class="bg-white p-8 md:p-10 rounded-3xl shadow-2xl border border-gray-100"
               data-aos="fade-left"
               data-aos-delay="200"
             >
@@ -1063,45 +1042,42 @@
               >
                 <div
                   id="successMessage"
-                  class="hidden p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-50 border border-green-200"
+                  class="hidden p-4 mb-4 text-sm text-green-800 rounded-xl bg-green-50 border border-green-200"
                   role="alert"
                 >
-                  <span class="font-medium">¡Éxito!</span> Tu mensaje ha sido
-                  enviado. Te contactaremos pronto.
+                  <span class="font-bold">Solicitud enviada.</span> Un estratega
+                  de Voltic se comunicará contigo pronto.
                 </div>
 
-                <div>
-                  <label
-                    for="name"
-                    class="block text-sm font-medium text-gray-700"
-                    >Tu Nombre</label
-                  >
-                  <div class="mt-1">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label
+                      for="name"
+                      class="block text-xs font-bold text-gray-400 uppercase tracking-widest mb-2"
+                      >Nombre Completo</label
+                    >
                     <input
                       type="text"
                       name="name"
                       id="name"
                       required
-                      class="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-voltic-purple-mid"
-                      placeholder="Juan Pérez"
+                      class="w-full px-4 py-4 bg-gray-50 border border-gray-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-voltic-purple-mid transition-all"
+                      placeholder="Ej. Juan Pérez"
                     />
                   </div>
-                </div>
-
-                <div>
-                  <label
-                    for="email"
-                    class="block text-sm font-medium text-gray-700"
-                    >Tu Email</label
-                  >
-                  <div class="mt-1">
+                  <div>
+                    <label
+                      for="email"
+                      class="block text-xs font-bold text-gray-400 uppercase tracking-widest mb-2"
+                      >Email Corporativo</label
+                    >
                     <input
                       type="email"
                       name="email"
                       id="email"
                       required
-                      class="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-voltic-purple-mid"
-                      placeholder="juan.perez@ejemplo.com"
+                      class="w-full px-4 py-4 bg-gray-50 border border-gray-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-voltic-purple-mid transition-all"
+                      placeholder="juan@empresa.com"
                     />
                   </div>
                 </div>
@@ -1109,27 +1085,25 @@
                 <div>
                   <label
                     for="message"
-                    class="block text-sm font-medium text-gray-700"
-                    >Mensaje</label
+                    class="block text-xs font-bold text-gray-400 uppercase tracking-widest mb-2"
+                    >Cuéntanos sobre tu negocio</label
                   >
-                  <div class="mt-1">
-                    <textarea
-                      id="message"
-                      name="message"
-                      rows="5"
-                      required
-                      class="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-voltic-purple-mid"
-                      placeholder="Hola Voltic, me gustaría cotizar un proyecto..."
-                    ></textarea>
-                  </div>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="4"
+                    required
+                    class="w-full px-4 py-4 bg-gray-50 border border-gray-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-voltic-purple-mid transition-all"
+                    placeholder="¿Qué procesos te gustaría automatizar o qué resultados buscas con tu landing page?"
+                  ></textarea>
                 </div>
 
                 <div>
                   <button
                     type="submit"
-                    class="w-full py-3 px-8 font-bold font-spartan uppercase text-base rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-lg bg-gradient-to-r from-voltic-purple-mid to-voltic-teal text-white"
+                    class="w-full py-4 px-8 font-black font-spartan uppercase text-sm tracking-widest rounded-full transition-all duration-300 transform hover:scale-[1.02] hover:shadow-2xl bg-gray-900 text-white"
                   >
-                    Enviar Mensaje
+                    Solicitar mi Diagnóstico Gratis
                   </button>
                 </div>
               </form>
@@ -1146,36 +1120,42 @@
           <div
             class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center"
           >
-            <div class="order-2 lg:order-1" data-aos="fade-right">
+            <div class="order-2 lg:order-1 relative" data-aos="fade-right">
+              <div
+                class="absolute -inset-4 bg-voltic-teal/20 rounded-xl blur-2xl opacity-30"
+              ></div>
               <img
                 src="assets/img/modelo3.webp"
-                alt="Voltic - Preguntas Frecuentes"
+                alt="Estrategia Voltic"
                 loading="lazy"
-                class="rounded-xl w-full h-auto"
+                class="relative z-10 rounded-2xl w-full h-auto shadow-2xl grayscale-[30%] hover:grayscale-0 transition-all duration-700"
               />
             </div>
 
             <div class="order-1 lg:order-2" data-aos="fade-left">
-              <h2
-                class="font-spartan font-black text-4xl md:text-5xl mb-10 leading-tight"
+              <span
+                class="inline-block text-voltic-teal font-bold text-xs uppercase tracking-[0.3em] mb-4"
               >
-                PREGUNTAS FRECUENTES
+                Transparencia y Resultados
+              </span>
+              <h2
+                class="font-spartan font-black text-4xl md:text-5xl mb-10 leading-tight uppercase tracking-tighter"
+              >
+                RESPUESTAS PARA <br />
+                <span class="text-voltic-teal">TU NEGOCIO</span>
               </h2>
 
               <div x-data="{ open: 1 }" class="space-y-4">
-                <div>
+                <div class="border-b border-white/10 pb-4">
                   <button
                     @click="open = (open === 1 ? null : 1)"
-                    class="w-full flex justify-between items-center text-left p-5 rounded-full font-spartan font-bold text-lg transition-all duration-300"
-                    :class="{
-                'bg-gradient-to-r from-voltic-purple-mid to-voltic-teal text-white': open === 1,
-                'bg-gray-800 text-gray-200 hover:bg-gray-700': open !== 1
-              }"
+                    class="w-full flex justify-between items-center text-left p-5 rounded-2xl font-spartan font-bold text-lg transition-all duration-300"
+                    :class="open === 1 ? 'bg-white text-voltic-purple-dark' : 'bg-white/5 text-gray-300 hover:bg-white/10'"
                   >
-                    <span>¿Cuánto tiempo tarda en hacerse un sitio web?</span>
+                    <span>¿Qué tan rápido puedo empezar a facturar?</span>
                     <svg
                       :class="{ 'rotate-180': open === 1 }"
-                      class="w-5 h-5 transition-transform flex-shrink-0"
+                      class="w-5 h-5 transition-transform"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -1190,33 +1170,28 @@
                   </button>
                   <div
                     x-show="open === 1"
-                    x-transition
+                    x-collapse
                     x-cloak
-                    class="px-5 py-4 text-gray-300 text-base"
+                    class="px-6 py-4 text-gray-400 leading-relaxed"
                   >
-                    <p>
-                      El tiempo de entrega depende de la complejidad del
-                      proyecto. Una landing page puede tomar 1-2 semanas,
-                      mientras que un sitio de e-commerce completo puede tardar
-                      de 6 a 8 semanas. Siempre te daremos un cronograma claro
-                      antes de empezar.
-                    </p>
+                    Priorizamos el <strong>Despliegue Ágil</strong>. Una Landing
+                    Page de alta conversión está lista en 1-2 semanas. Sistemas
+                    administrativos más robustos toman entre 6-8 semanas, pero
+                    siempre entregamos módulos funcionales para que no dejes de
+                    operar mientras escalamos.
                   </div>
                 </div>
 
-                <div>
+                <div class="border-b border-white/10 pb-4">
                   <button
                     @click="open = (open === 2 ? null : 2)"
-                    class="w-full flex justify-between items-center text-left p-5 rounded-full font-spartan font-bold text-lg transition-all duration-300"
-                    :class="{
-                'bg-gradient-to-r from-voltic-purple-mid to-voltic-teal text-white': open === 2,
-                'bg-gray-800 text-gray-200 hover:bg-gray-700': open !== 2
-              }"
+                    class="w-full flex justify-between items-center text-left p-5 rounded-2xl font-spartan font-bold text-lg transition-all duration-300"
+                    :class="open === 2 ? 'bg-white text-voltic-purple-dark' : 'bg-white/5 text-gray-300 hover:bg-white/10'"
                   >
-                    <span>¿Ofrecen mantenimiento después del lanzamiento?</span>
+                    <span>¿Cómo garantizan que mi sistema no se detenga?</span>
                     <svg
                       :class="{ 'rotate-180': open === 2 }"
-                      class="w-5 h-5 transition-transform flex-shrink-0"
+                      class="w-5 h-5 transition-transform"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -1231,32 +1206,28 @@
                   </button>
                   <div
                     x-show="open === 2"
-                    x-transition
+                    x-collapse
                     x-cloak
-                    class="px-5 py-4 text-gray-300 text-base"
+                    class="px-6 py-4 text-gray-400 leading-relaxed"
                   >
-                    <p>
-                      ¡Sí! Ofrecemos planes de mantenimiento mensual que
-                      incluyen actualizaciones de seguridad, copias de respaldo,
-                      y soporte técnico para que tu sitio siempre esté seguro y
-                      funcionando al 100%.
-                    </p>
+                    Un sistema caído es dinero perdido. Ofrecemos
+                    <strong>Blindaje Operativo</strong> con copias de seguridad
+                    diarias y monitoreo constante. Si algo falla, nuestro
+                    soporte técnico responde de inmediato para asegurar tu flujo
+                    de caja.
                   </div>
                 </div>
 
                 <div>
                   <button
                     @click="open = (open === 3 ? null : 3)"
-                    class="w-full flex justify-between items-center text-left p-5 rounded-full font-spartan font-bold text-lg transition-all duration-300"
-                    :class="{
-                'bg-gradient-to-r from-voltic-purple-mid to-voltic-teal text-white': open === 3,
-                'bg-gray-800 text-gray-200 hover:bg-gray-700': open !== 3
-              }"
+                    class="w-full flex justify-between items-center text-left p-5 rounded-2xl font-spartan font-bold text-lg transition-all duration-300"
+                    :class="open === 3 ? 'bg-white text-voltic-purple-dark' : 'bg-white/5 text-gray-300 hover:bg-white/10'"
                   >
-                    <span>¿Qué necesito para empezar el proyecto?</span>
+                    <span>¿Qué necesito para empezar a automatizar hoy?</span>
                     <svg
                       :class="{ 'rotate-180': open === 3 }"
-                      class="w-5 h-5 transition-transform flex-shrink-0"
+                      class="w-5 h-5 transition-transform"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -1271,16 +1242,14 @@
                   </button>
                   <div
                     x-show="open === 3"
-                    x-transition
+                    x-collapse
                     x-cloak
-                    class="px-5 py-4 text-gray-300 text-base"
+                    class="px-6 py-4 text-gray-400 leading-relaxed"
                   >
-                    <p>
-                      Para empezar, necesitamos conocer tu idea de negocio, tus
-                      objetivos, y si ya tienes un logo o identidad de marca. Si
-                      no tienes nada, ¡no te preocupes! Nuestra consultoría
-                      puede guiarte desde cero.
-                    </p>
+                    Solo necesitas identificar dónde están tus mayores cuellos
+                    de botella manuales. Nosotros nos encargamos de la
+                    consultoría, el diseño de la arquitectura y la
+                    implementación técnica para que tú te enfoques en liderar.
                   </div>
                 </div>
               </div>
@@ -1298,128 +1267,143 @@
           <div data-aos="fade-up" data-aos-delay="100">
             <a
               href="#"
-              class="flex items-center justify-center md:justify-start gap-3"
+              class="flex items-center justify-center md:justify-start gap-3 mb-6"
             >
               <img
                 src="assets/img/logoS.webp"
                 loading="lazy"
-                alt="Voltic Logo Rayo"
+                alt="Voltic Logo"
                 class="h-10 w-10"
               />
               <span class="font-amaranth font-bold text-3xl text-white"
                 >Voltic</span
               >
             </a>
-            <p class="font-spartan text-sm mt-4 text-gray-400">
-              Impulso Digital Contigo. <br />
-              Transformamos ideas en soluciones digitales exitosas.
+            <p class="font-spartan text-sm text-gray-400 leading-relaxed">
+              Ingeniería de software enfocada en resultados. <br />
+              No diseñamos páginas, construimos los activos digitales que
+              generan la liquidez y el orden que tu empresa necesita.
             </p>
           </div>
 
           <div data-aos="fade-up" data-aos-delay="200">
             <h4
-              class="font-spartan font-bold text-lg text-white mb-4 uppercase"
+              class="font-spartan font-bold text-lg text-white mb-6 uppercase tracking-widest"
             >
-              Navegación
+              Soluciones
             </h4>
-            <ul class="space-y-3">
+            <ul class="space-y-4">
               <li>
                 <a
-                  href="#inicio"
-                  class="font-spartan text-gray-300 hover:text-voltic-teal transition-colors"
-                  >Inicio</a
+                  href="#servicios"
+                  class="font-spartan text-gray-400 hover:text-voltic-teal transition-colors flex items-center justify-center md:justify-start gap-2"
                 >
+                  <span
+                    class="w-1 h-1 bg-voltic-purple-mid rounded-full"
+                  ></span>
+                  Sistemas Administrativos
+                </a>
               </li>
               <li>
                 <a
                   href="#servicios"
-                  class="font-spartan text-gray-300 hover:text-voltic-teal transition-colors"
-                  >Servicios</a
+                  class="font-spartan text-gray-400 hover:text-voltic-teal transition-colors flex items-center justify-center md:justify-start gap-2"
                 >
+                  <span
+                    class="w-1 h-1 bg-voltic-purple-mid rounded-full"
+                  ></span>
+                  Landing Pages Pro
+                </a>
               </li>
               <li>
                 <a
-                  href="#nosotros"
-                  class="font-spartan text-gray-300 hover:text-voltic-teal transition-colors"
-                  >Sobre Nosotros</a
+                  href="#proyectos"
+                  class="font-spartan text-gray-400 hover:text-voltic-teal transition-colors flex items-center justify-center md:justify-start gap-2"
                 >
-              </li>
-              <li>
-                <a
-                  href="#faq"
-                  class="font-spartan text-gray-300 hover:text-voltic-teal transition-colors"
-                  >Preguntas Frecuentes</a
-                >
+                  <span
+                    class="w-1 h-1 bg-voltic-purple-mid rounded-full"
+                  ></span>
+                  Activos Desplegados
+                </a>
               </li>
               <li>
                 <a
                   href="#contacto"
-                  class="font-spartan text-gray-300 hover:text-voltic-teal transition-colors"
-                  >Contacto</a
+                  class="font-spartan text-gray-400 hover:text-voltic-teal transition-colors flex items-center justify-center md:justify-start gap-2"
                 >
+                  <span
+                    class="w-1 h-1 bg-voltic-purple-mid rounded-full"
+                  ></span>
+                  Auditoría de Ventas
+                </a>
               </li>
             </ul>
           </div>
 
           <div data-aos="fade-up" data-aos-delay="300">
             <h4
-              class="font-spartan font-bold text-lg text-white mb-4 uppercase"
+              class="font-spartan font-bold text-lg text-white mb-6 uppercase tracking-widest"
             >
-              Contáctanos
+              Vías Rápidas
             </h4>
+            <p class="text-sm text-gray-500 mb-6 font-spartan">
+              ¿Listo para automatizar? Hablemos ahora por el canal de tu
+              preferencia:
+            </p>
             <div
               class="flex items-center justify-center md:justify-start gap-6"
             >
               <a
                 href="mailto:Voltic202513@gmail.com"
-                class="transform transition-transform hover:scale-110"
-                aria-label="Enviar correo a Voltic"
+                class="bg-gray-900 p-3 rounded-full hover:bg-voltic-purple-mid transition-all duration-300"
+                aria-label="Email"
               >
                 <img
-                  width="32"
-                  height="32"
+                  width="24"
+                  height="24"
                   src="https://img.icons8.com/color/48/gmail-new.png"
-                  alt="gmail-new"
+                  alt="gmail"
                 />
               </a>
               <a
                 href="https://instagram.com/Voltic202513"
                 target="_blank"
-                class="transform transition-transform hover:scale-110"
-                aria-label="Ir al Instagram de Voltic"
+                class="bg-gray-900 p-3 rounded-full hover:bg-voltic-purple-mid transition-all duration-300"
+                aria-label="Instagram"
               >
                 <img
-                  width="32"
-                  height="32"
+                  width="24"
+                  height="24"
                   src="https://img.icons8.com/fluency/48/instagram-new.png"
-                  alt="instagram-new"
+                  alt="instagram"
                 />
               </a>
               <a
                 href="https://wa.me/584144489708"
                 target="_blank"
-                class="transform transition-transform hover:scale-110"
-                aria-label="Contactar a Voltic por WhatsApp"
+                class="bg-gray-900 p-3 rounded-full hover:bg-voltic-purple-mid transition-all duration-300"
+                aria-label="WhatsApp"
               >
                 <img
-                  width="32"
-                  height="32"
+                  width="24"
+                  height="24"
                   src="https://img.icons8.com/color/48/whatsapp--v1.png"
-                  alt="whatsapp--v1"
+                  alt="whatsapp"
                 />
               </a>
             </div>
           </div>
         </div>
 
-        <div class="mt-16 border-t border-gray-800 pt-8 text-center">
-          <p class="font-spartan text-sm text-gray-500">
-            © 2025 Voltic. Todos los derechos reservados.
+        <div class="mt-16 border-t border-gray-900 pt-8 text-center">
+          <p
+            class="font-spartan text-xs text-gray-600 tracking-widest uppercase"
+          >
+            © 2026 Voltic. Tecnología orientada a la rentabilidad.
           </p>
         </div>
       </div>
     </footer>
-
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="assets/js/script.js"></script>
   </body>
